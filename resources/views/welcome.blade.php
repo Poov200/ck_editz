@@ -143,46 +143,7 @@
         </div>
     </div>
 
-    <!-- Header / Navbar -->
-    <header class="fixed top-0 w-full z-50 transition-all duration-300 py-6" ng-class="{'nav-scrolled': scrolled}">
-        <nav class="container mx-auto px-6 flex justify-between items-center">
-            <a href="#home" class="flex items-center gap-3 group">
-                <img src="{{ asset('img/logo.png') }}" alt="CK Editz Logo" class="w-12 h-12 rounded-full object-cover shadow-lg group-hover:rotate-12 transition duration-300">
-                <div class="hidden sm:block">
-                    <h1 class="text-xl font-display font-extrabold text-ck-dark leading-none">CK Editz</h1>
-                    <p class="text-[10px] tracking-[0.2em] text-ck-purple font-semibold uppercase mt-1">Digital Solutions</p>
-                </div>
-            </a>
-            
-            <ul class="hidden lg:flex space-x-10 font-medium text-ck-dark/70 text-sm uppercase tracking-wider">
-                <li><a href="#home" class="hover:text-ck-purple transition relative group">Home <span class="absolute -bottom-2 left-0 w-0 h-1 bg-ck-pink rounded-full group-hover:w-full transition-all duration-300"></span></a></li>
-                <li><a href="#about" class="hover:text-ck-purple transition relative group">About <span class="absolute -bottom-2 left-0 w-0 h-1 bg-ck-pink rounded-full group-hover:w-full transition-all duration-300"></span></a></li>
-                <li><a href="#services" class="hover:text-ck-purple transition relative group">Services <span class="absolute -bottom-2 left-0 w-0 h-1 bg-ck-pink rounded-full group-hover:w-full transition-all duration-300"></span></a></li>
-                <li><a href="#process" class="hover:text-ck-purple transition relative group">Process <span class="absolute -bottom-2 left-0 w-0 h-1 bg-ck-pink rounded-full group-hover:w-full transition-all duration-300"></span></a></li>
-                <li><a href="#portfolio" class="hover:text-ck-purple transition relative group">Work <span class="absolute -bottom-2 left-0 w-0 h-1 bg-ck-pink rounded-full group-hover:w-full transition-all duration-300"></span></a></li>
-                <li><a href="#contact" class="hover:text-ck-purple transition relative group">Contact <span class="absolute -bottom-2 left-0 w-0 h-1 bg-ck-pink rounded-full group-hover:w-full transition-all duration-300"></span></a></li>
-            </ul>
-            
-            <a href="#contact" class="hidden lg:inline-flex items-center gap-2 btn-magic text-white px-6 py-3 rounded-full font-semibold text-sm">
-                Get Started <i class="fas fa-arrow-right text-xs"></i>
-            </a>
-
-            <button class="lg:hidden text-2xl text-ck-dark p-2" ng-click="toggleMenu()">
-                <i class="fas" ng-class="menuOpen ? 'fa-times' : 'fa-bars'"></i>
-            </button>
-        </nav>
-    </header>
-
-    <!-- Mobile Menu Overlay -->
-    <div class="mobile-menu fixed inset-0 z-40 bg-ck-bg/95 backdrop-blur-lg lg:hidden flex flex-col items-center justify-center space-y-8 text-2xl font-display text-ck-dark" style="transform: @{{menuOpen ? 'translateY(0)' : 'translateY(-100%)'}};">
-        <button class="absolute top-8 right-6 text-3xl text-ck-pink" ng-click="toggleMenu()"><i class="fas fa-times"></i></button>
-        <a href="#home" ng-click="toggleMenu()" class="hover:text-ck-purple transition">Home</a>
-        <a href="#about" ng-click="toggleMenu()" class="hover:text-ck-purple transition">About</a>
-        <a href="#services" ng-click="toggleMenu()" class="hover:text-ck-purple transition">Services</a>
-        <a href="#process" ng-click="toggleMenu()" class="hover:text-ck-purple transition">Process</a>
-        <a href="#portfolio" ng-click="toggleMenu()" class="hover:text-ck-purple transition">Work</a>
-        <a href="#contact" ng-click="toggleMenu()" class="hover:text-ck-purple transition">Contact</a>
-    </div>
+    @include('ck_editz.navbar')
 
     <!-- Hero Section -->
     <section id="home" class="relative min-h-screen flex items-center pt-32 pb-20 overflow-hidden">
@@ -197,12 +158,13 @@
                 <span class="inline-block px-4 py-2 mb-6 text-xs font-bold rounded-full bg-white text-ck-purple shadow-lg shadow-purple-500/10 border border-purple-100 uppercase tracking-widest">
                     ✦ 360° Digital Solutions
                 </span>
-                <h1 class="text-5xl md:text-7xl font-display font-extrabold text-ck-dark leading-tight mb-6">
-                    Your Complete <br><span class="animated-text">Digital Partner</span>
-                </h1>
-                <p class="text-lg text-ck-dark/70 mb-10 max-w-xl font-medium">
-                    From high-converting Meta Ads and stunning Website Design to Video Editing and GEM Registration. CK Editz provides everything you need to launch, grow, and dominate your digital presence.
-                </p>
+                <h1 class="text-3xl md:text-5xl font-display font-extrabold text-ck-dark leading-tight mb-6">
+    Stop Chasing Customers <br><span class="animated-text">Start Attracting Them</span>
+</h1>
+
+<p class="text-lg text-ck-dark/70 mb-10 max-w-xl font-medium">
+    We turn ideas into powerful digital experiences — from high-converting Meta & Google Ads and modern websites to creative content, video solutions. CK Editz helps businesses build credibility, reach the right audience, generate quality leads, and grow with confidence.
+</p>
                 <div class="flex flex-wrap gap-4">
                     <a href="#services" class="inline-flex items-center gap-2 btn-magic text-white px-8 py-4 rounded-full font-bold text-sm uppercase tracking-wider">
                         Explore Services <i class="fas fa-rocket"></i>
@@ -216,7 +178,7 @@
             <div class="relative hidden md:block" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="300">
                 <div class="absolute -inset-4 bg-gradient-to-tr from-ck-purple via-ck-pink to-ck-cyan blob opacity-80 blur-lg"></div>
                 <div class="relative animate-float">
-                    <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=2070&auto=format&fit=crop" alt="Digital Agency" class="relative w-full h-[550px] object-cover rounded-[3rem] border-4 border-white shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=2070&auto=format&fit=crop" alt="Digital Agency" class="relative w-full h-[400px] object-cover rounded-[3rem] border-4 border-white shadow-2xl">
                 </div>
                 <div class="absolute -bottom-10 -left-10 bg-white p-6 rounded-2xl shadow-2xl flex items-center gap-4 w-72 animate-float border border-purple-100" style="animation-delay: 1s;">
                     <div class="w-12 h-12 bg-gradient-to-br from-ck-purple to-ck-pink rounded-full flex items-center justify-center text-white text-xl shadow-lg">
@@ -249,16 +211,20 @@
                 <div class="absolute -inset-2 bg-gradient-to-br from-ck-purple to-ck-cyan rounded-3xl blur-lg opacity-20"></div>
                 <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=2073&auto=format&fit=crop" alt="About Us" class="relative rounded-3xl shadow-xl w-full h-[600px] object-cover border-4 border-white">
                 <div class="absolute -bottom-10 -right-10 bg-gradient-to-br from-ck-purple to-ck-pink p-8 rounded-3xl shadow-xl hidden md:block" data-aos="zoom-in" data-aos-delay="400">
-                    <h4 class="text-4xl font-display font-extrabold text-white">8+</h4>
+                    <h4 class="text-4xl font-display font-extrabold text-white">5+</h4>
                     <p class="text-white/80 text-sm uppercase font-bold tracking-wider mt-1">Years Experience</p>
                 </div>
             </div>
             <div data-aos="fade-left">
                 <span class="text-ck-pink font-bold uppercase tracking-[0.3em] text-xs">About CK Editz</span>
-                <h2 class="text-4xl md:text-5xl font-display mt-4 mb-8 text-ck-dark font-extrabold">More Than Marketing. <br><span class="animated-text">We Build Digital Empires.</span></h2>
-                <p class="text-ck-dark/70 mb-6 text-lg font-medium leading-relaxed">
-                    CK Editz is a full-service digital agency. We don't just run your ads; we build your entire digital infrastructure. From registering your domain and designing your website to editing your videos and running high-ROI ad campaigns, we handle it all.
-                </p>
+                <h2 class="text-4xl md:text-5xl font-display mt-4 mb-8 text-ck-dark font-extrabold">
+    We Don't Just Build Brands. <br>
+    <span class="animated-text">We Build Growth.</span>
+</h2>
+
+<p class="text-ck-dark/70 mb-6 text-lg font-medium leading-relaxed">
+    At CK Editz Digital Solutions, we combine technology, creativity, and digital marketing to build a complete online presence for your business. From professional websites and landing pages to Meta & Google Ads, Google Business Profile management, social media handling, content creation, video editing, branding, and GeM registration — we deliver everything you need to attract customers, generate leads, and grow your business.
+</p>
                 <div class="grid grid-cols-2 gap-6 mb-8">
                     <div class="flex items-start gap-4">
                         <div class="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center text-ck-purple text-xl flex-shrink-0">
@@ -302,7 +268,7 @@
                     </div>
                     <h3 class="text-xl font-display font-bold text-ck-dark mb-3">@{{service.title}}</h3>
                     <p class="text-ck-dark/70 mb-6 font-medium text-sm">@{{service.description}}</p>
-                    <a href="#contact" class="text-ck-purple font-bold flex items-center gap-2 text-sm uppercase tracking-wider hover:gap-4 transition-all">
+                    <a  ng-href="@{{service.url}}" class="text-ck-purple font-bold flex items-center gap-2 text-sm uppercase tracking-wider hover:gap-4 transition-all">
                         Learn More <i class="fas fa-arrow-right text-xs"></i>
                     </a>
                 </div>
@@ -345,56 +311,75 @@
         </div>
     </section>
 
-    <!-- Our Process Section -->
-    <section id="process" class="py-32 bg-white relative overflow-hidden">
-        <div class="container mx-auto px-6 relative z-10">
-            <div class="text-center mb-20" data-aos="fade-up">
-                <span class="text-ck-pink font-bold uppercase tracking-[0.3em] text-xs">How We Work</span>
-                <h2 class="text-4xl md:text-5xl font-display mt-4 text-ck-dark font-extrabold">Simple <span class="animated-text">4-Step Process</span></h2>
-            </div>
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="text-center p-6 bg-ck-bg rounded-3xl border border-purple-100" data-aos="fade-up" data-aos-delay="0">
-                    <div class="w-16 h-16 mx-auto bg-gradient-to-br from-ck-purple to-ck-pink rounded-full flex items-center justify-center text-2xl mb-4 font-display font-bold text-white shadow-lg">1</div>
-                    <h4 class="text-xl font-display font-bold mb-2 text-ck-dark">Discovery</h4>
-                    <p class="text-ck-dark/60 text-sm font-medium">We understand your business, goals, and target audience.</p>
-                </div>
-                <div class="text-center p-6 bg-ck-bg rounded-3xl border border-purple-100" data-aos="fade-up" data-aos-delay="200">
-                    <div class="w-16 h-16 mx-auto bg-gradient-to-br from-ck-purple to-ck-pink rounded-full flex items-center justify-center text-2xl mb-4 font-display font-bold text-white shadow-lg">2</div>
-                    <h4 class="text-xl font-display font-bold mb-2 text-ck-dark">Strategy</h4>
-                    <p class="text-ck-dark/60 text-sm font-medium">Crafting a customized digital roadmap (Web, Ads, Social).</p>
-                </div>
-                <div class="text-center p-6 bg-ck-bg rounded-3xl border border-purple-100" data-aos="fade-up" data-aos-delay="400">
-                    <div class="w-16 h-16 mx-auto bg-gradient-to-br from-ck-purple to-ck-pink rounded-full flex items-center justify-center text-2xl mb-4 font-display font-bold text-white shadow-lg">3</div>
-                    <h4 class="text-xl font-display font-bold mb-2 text-ck-dark">Execution</h4>
-                    <p class="text-ck-dark/60 text-sm font-medium">Launching high-converting campaigns, websites, and creatives.</p>
-                </div>
-                <div class="text-center p-6 bg-ck-bg rounded-3xl border border-purple-100" data-aos="fade-up" data-aos-delay="600">
-                    <div class="w-16 h-16 mx-auto bg-gradient-to-br from-ck-purple to-ck-pink rounded-full flex items-center justify-center text-2xl mb-4 font-display font-bold text-white shadow-lg">4</div>
-                    <h4 class="text-xl font-display font-bold mb-2 text-ck-dark">Optimize</h4>
-                    <p class="text-ck-dark/60 text-sm font-medium">Tracking data and optimizing for maximum ROI.</p>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Portfolio / Work -->
-    <section id="portfolio" class="py-32 bg-ck-bg relative overflow-hidden">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-20" data-aos="fade-up">
-                <span class="text-ck-purple font-bold uppercase tracking-[0.3em] text-xs">Portfolio</span>
-                <h2 class="text-4xl md:text-5xl font-display mt-4 text-ck-dark font-extrabold">Our Recent <span class="animated-text">Projects</span></h2>
-            </div>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="relative group overflow-hidden rounded-3xl cursor-pointer shadow-lg" data-aos="zoom-in-up" ng-repeat="project in portfolio">
-                    <img ng-src="@{{project.image}}" alt="Project" class="w-full h-96 object-cover transition-transform duration-700 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-gradient-to-t from-ck-dark/90 via-ck-dark/40 to-transparent flex flex-col justify-end p-8 opacity-90 group-hover:opacity-100 transition">
-                        <span class="text-white text-xs uppercase font-bold tracking-widest mb-2 bg-gradient-to-r from-ck-purple to-ck-pink w-max px-3 py-1 rounded-full shadow-lg">@{{project.category}}</span>
-                        <h3 class="text-3xl font-display font-bold text-white">@{{project.title}}</h3>
+ <section id="portfolio" class="py-32 bg-ck-bg relative overflow-hidden">
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-20" data-aos="fade-up">
+            <span class="text-ck-purple font-bold uppercase tracking-[0.3em] text-xs">Portfolio</span>
+            <h2 class="text-4xl md:text-5xl font-display mt-4 text-ck-dark font-extrabold">Our Recent <span class="animated-text">Successes</span></h2>
+            <p class="text-gray-500 mt-4 max-w-2xl mx-auto">Driving real results through optimized Google My Business profiles, engaging social media pages, high-converting Meta Ads, and stunning websites.</p>
+        </div>
+
+        <!-- Bento Grid Layout -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-[300px]">
+            
+            <!-- 1. Google My Business (Large Feature) -->
+            <div class="relative group overflow-hidden rounded-3xl cursor-pointer shadow-lg md:col-span-2 lg:col-span-2 lg:row-span-2" data-aos="zoom-in-up">
+                <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=1200&q=80" alt="GMB Optimization" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-ck-dark/95 via-ck-dark/40 to-transparent flex flex-col justify-end p-8">
+                    <div class="flex gap-2 mb-3">
+                        <span class="text-white text-xs uppercase font-bold tracking-widest bg-blue-500 w-max px-3 py-1 rounded-full shadow-lg">Google My Business</span>
+                        <span class="text-ck-dark text-xs uppercase font-bold tracking-widest bg-yellow-400 w-max px-3 py-1 rounded-full shadow-lg flex items-center gap-1">⭐ 4.9 Rating</span>
                     </div>
+                    <h3 class="text-3xl md:text-4xl font-display font-bold text-white">Local SEO & GMB Optimization</h3>
+                    <p class="text-gray-300 mt-2 max-w-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 max-h-0 group-hover:max-h-20 overflow-hidden">Increased local search visibility and foot traffic by 140% for our clients through fully optimized Google My Business profiles and review generation strategies.</p>
                 </div>
             </div>
+
+            <!-- 2. Facebook Pages -->
+            <div class="relative group overflow-hidden rounded-3xl cursor-pointer shadow-lg" data-aos="zoom-in-up" data-aos-delay="100">
+                <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=600&q=80" alt="Facebook Page Management" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-ck-dark/95 via-ck-dark/40 to-transparent flex flex-col justify-end p-6">
+                    <span class="text-white text-xs uppercase font-bold tracking-widest mb-2 bg-blue-600 w-max px-3 py-1 rounded-full shadow-lg">Facebook Pages</span>
+                    <h3 class="text-2xl font-display font-bold text-white">Social Community Management</h3>
+                </div>
+            </div>
+
+            <!-- 3. Meta Ads -->
+            <div class="relative group overflow-hidden rounded-3xl cursor-pointer shadow-lg" data-aos="zoom-in-up" data-aos-delay="200">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80" alt="Meta Ads Campaign" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-ck-dark/95 via-ck-dark/40 to-transparent flex flex-col justify-end p-6">
+                    <div class="flex gap-2 mb-2">
+                        <span class="text-white text-xs uppercase font-bold tracking-widest bg-gradient-to-r from-ck-purple to-ck-pink w-max px-3 py-1 rounded-full shadow-lg">Meta Ads</span>
+                    </div>
+                    <h3 class="text-2xl font-display font-bold text-white">High-ROAS Ad Campaigns</h3>
+                    <span class="text-green-400 font-bold text-sm mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">Avg 4.2x Return on Ad Spend</span>
+                </div>
+            </div>
+
+            <!-- 4. Landing Page (Wide) -->
+            <div class="relative group overflow-hidden rounded-3xl cursor-pointer shadow-lg md:col-span-2" data-aos="zoom-in-up" data-aos-delay="300">
+                <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=1200&q=80" alt="Landing Page Design" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-ck-dark/95 via-ck-dark/40 to-transparent flex flex-col justify-end p-8">
+                    <span class="text-white text-xs uppercase font-bold tracking-widest mb-2 bg-gradient-to-r from-ck-purple to-ck-pink w-max px-3 py-1 rounded-full shadow-lg">Landing Pages</span>
+                    <h3 class="text-3xl font-display font-bold text-white">High-Converting Landing Pages</h3>
+                    <p class="text-gray-300 mt-2 max-w-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">Custom built landing pages designed specifically to turn traffic into leads and sales.</p>
+                </div>
+            </div>
+
+            <!-- 5. Website Design -->
+            <div class="relative group overflow-hidden rounded-3xl cursor-pointer shadow-lg" data-aos="zoom-in-up" data-aos-delay="400">
+                <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&w=600&q=80" alt="Website Development" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-ck-dark/95 via-ck-dark/40 to-transparent flex flex-col justify-end p-6">
+                    <span class="text-white text-xs uppercase font-bold tracking-widest mb-2 bg-gray-800 w-max px-3 py-1 rounded-full shadow-lg">Websites</span>
+                    <h3 class="text-2xl font-display font-bold text-white">Full Website Development</h3>
+                </div>
+            </div>
+
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Testimonials -->
     <section class="py-32 bg-white relative">
@@ -477,9 +462,17 @@
             </div>
 
             <div class="gradient-border p-10 rounded-3xl shadow-2xl" data-aos="fade-left">
-                <div ng-if="formSuccess" class="mb-6 bg-green-100 border border-green-200 text-green-700 p-4 rounded-xl text-center font-bold flex items-center justify-center gap-2">
-                    <i class="fas fa-check-circle"></i> Thank you! Your message has been sent.
-                </div>
+                <div ng-if="formSuccess"
+     class="mb-6 bg-green-100 border border-green-200 text-green-700 p-4 rounded-xl text-center font-bold flex items-center justify-center gap-2">
+    <i class="fas fa-check-circle"></i>
+    Thank you! Your message has been sent successfully.
+</div>
+
+<div ng-if="formError"
+     class="mb-6 bg-red-100 border border-red-200 text-red-700 p-4 rounded-xl text-center font-bold flex items-center justify-center gap-2">
+    <i class="fas fa-exclamation-circle"></i>
+    Sorry, something went wrong. Please try again.
+</div>
                 <form ng-submit="submitContactForm()">
                     <div class="grid md:grid-cols-2 gap-6 mb-6">
                         <div>
@@ -490,6 +483,20 @@
                             <label class="block text-ck-dark/70 text-sm mb-2 font-bold uppercase tracking-wider">Email Address</label>
                             <input type="email" required ng-model="formData.email" class="w-full bg-ck-bg border border-purple-100 rounded-xl px-4 py-3 text-ck-dark focus:outline-none focus:border-ck-purple focus:bg-white transition font-medium" placeholder="john@brand.com">
                         </div>
+                        <div>
+        <label class="block text-ck-dark/70 text-sm mb-2 font-bold uppercase tracking-wider">
+            Phone Number
+        </label>
+
+        <input
+            type="tel"
+            required
+            ng-model="formData.phone"
+            pattern="[0-9]{10}"
+            maxlength="10"
+            class="w-full bg-ck-bg border border-purple-100 rounded-xl px-4 py-3 text-ck-dark focus:outline-none focus:border-ck-purple focus:bg-white transition font-medium"
+            placeholder="9876543210">
+    </div>
                     </div>
                     <div class="mb-6">
                         <label class="block text-ck-dark/70 text-sm mb-2 font-bold uppercase tracking-wider">Subject</label>
@@ -499,9 +506,19 @@
                         <label class="block text-ck-dark/70 text-sm mb-2 font-bold uppercase tracking-wider">Message</label>
                         <textarea required ng-model="formData.message" rows="4" class="w-full bg-ck-bg border border-purple-100 rounded-xl px-4 py-3 text-ck-dark focus:outline-none focus:border-ck-purple focus:bg-white transition font-medium" placeholder="Tell us about your project..."></textarea>
                     </div>
-                    <button type="submit" class="w-full btn-magic text-white py-4 rounded-xl font-display font-bold text-lg uppercase tracking-wider flex items-center justify-center gap-2">
-                        Send Message <i class="fas fa-paper-plane"></i>
-                    </button>
+                    <button type="submit"
+        ng-disabled="sending"
+        class="w-full btn-magic text-white py-4 rounded-xl font-display font-bold text-lg uppercase tracking-wider flex items-center justify-center gap-2 disabled:opacity-60">
+
+    <span ng-if="!sending">
+        Send Message <i class="fas fa-paper-plane"></i>
+    </span>
+
+    <span ng-if="sending">
+        Sending... <i class="fas fa-spinner fa-spin"></i>
+    </span>
+
+</button>
                 </form>
             </div>
         </div>
@@ -510,193 +527,7 @@
     <!-- Footer -->
 
 <!-- Footer -->
-<footer class="bg-ck-dark pt-20 pb-10 relative overflow-hidden">
-
-    <!-- Background Glow -->
-    <div class="absolute top-0 left-1/2 w-96 h-96 bg-ck-purple blob filter blur-[150px] opacity-20"></div>
-
-    <div class="container mx-auto px-6 relative z-10">
-
-        <!-- Footer Grid -->
-        <div class="grid md:grid-cols-4 gap-12 mb-12">
-
-            <!-- Company Info -->
-            <div>
-                <div class="flex items-center gap-3 mb-6">
-
-                    <img src="{{ asset('img/logo.png') }}"
-                         alt="CK Editz Logo"
-                         class="w-12 h-12 rounded-full shadow-lg">
-
-                    <div>
-                        <h1 class="text-xl font-display font-extrabold text-white leading-none">
-                            CK Editz
-                        </h1>
-
-                        <p class="text-[10px] tracking-[0.2em] text-ck-pink font-semibold uppercase mt-1">
-                            Digital Solutions
-                        </p>
-                    </div>
-
-                </div>
-
-                <p class="text-white/60 font-medium mb-5">
-                    Your all-in-one digital partner. From marketing to web hosting,
-                    we grow your business online.
-                </p>
-
-                <!-- Contact Information -->
-                <div class="space-y-4 text-sm">
-
-                    <!-- Address -->
-                    <div class="flex items-start gap-3 text-white/70">
-                        <i class="fas fa-map-marker-alt text-ck-pink mt-1"></i>
-
-                        <span class="leading-relaxed">
-                            No 6/10, Second Floor,<br>
-                            2nd Main Road, Vijayanagar,<br>
-                            Velachery, Chennai
-                        </span>
-                    </div>
-
-                    <!-- Phone -->
-                    <div class="flex items-center gap-3">
-                        <i class="fas fa-phone-alt text-ck-pink"></i>
-
-                        <a href="tel:9884380579"
-                           class="text-white/70 hover:text-ck-pink transition">
-                            +91 98843 80579
-                        </a>
-                    </div>
-
-                    <!-- Email -->
-                    <div class="flex items-center gap-3">
-                        <i class="fas fa-envelope text-ck-pink"></i>
-
-                        <a href="mailto:ckeditz09@gmail.com"
-                           class="text-white/70 hover:text-ck-pink transition break-all">
-                            ckeditz09@gmail.com
-                        </a>
-                    </div>
-
-                </div>
-            </div>
-
-
-            <!-- Quick Links -->
-            <div>
-                <h4 class="text-lg font-display text-white mb-4 font-bold">
-                    Quick Links
-                </h4>
-
-                <ul class="space-y-3 text-white/60">
-                    <li>
-                        <a href="#home"
-                           class="hover:text-ck-pink transition font-medium">
-                            Home
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#about"
-                           class="hover:text-ck-pink transition font-medium">
-                            About Us
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#services"
-                           class="hover:text-ck-pink transition font-medium">
-                            Services
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#contact"
-                           class="hover:text-ck-pink transition font-medium">
-                            Contact
-                        </a>
-                    </li>
-                </ul>
-            </div>
-
-
-            <!-- Our Services -->
-            <div>
-                <h4 class="text-lg font-display text-white mb-4 font-bold">
-                    Our Services
-                </h4>
-
-                <ul class="space-y-3 text-white/60">
-                    <li class="font-medium">
-                        Digital Marketing & Ads
-                    </li>
-
-                    <li class="font-medium">
-                        Website & Landing Page Design
-                    </li>
-
-                    <li class="font-medium">
-                        Video & Poster Editing
-                    </li>
-
-                    <li class="font-medium">
-                        Domain, Hosting & GEM Reg.
-                    </li>
-                </ul>
-            </div>
-
-
-            <!-- Follow Us -->
-            <div>
-                <h4 class="text-lg font-display text-white mb-4 font-bold">
-                    Follow Us
-                </h4>
-
-                <div class="flex space-x-4">
-
-                    <!-- Facebook -->
-                    <a href="https://www.facebook.com/ckeditzdigitalmarketing"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       aria-label="Facebook"
-                       class="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center text-white hover:bg-gradient-to-br hover:from-ck-purple hover:to-ck-pink transition shadow-lg">
-
-                        <i class="fab fa-facebook-f"></i>
-
-                    </a>
-
-                    <!-- Instagram -->
-                    <a href="https://www.instagram.com/ckeditz_2025/"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       aria-label="Instagram"
-                       class="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center text-white hover:bg-gradient-to-br hover:from-ck-purple hover:to-ck-pink transition shadow-lg">
-
-                        <i class="fab fa-instagram"></i>
-
-                    </a>
-
-                </div>
-            </div>
-
-        </div>
-
-
-        <!-- Copyright -->
-        <div class="border-t border-white/10 pt-8 text-center text-white/40 font-medium">
-
-            <p>
-                &copy; @{{currentYear}} CK Editz. All Rights Reserved.
-                Designed with
-                <i class="fas fa-heart text-ck-pink"></i>
-            </p>
-
-        </div>
-
-    </div>
-</footer>
-```
+@include('ck_editz.footer')
 
 
     <!-- Back to Top Button -->
@@ -708,7 +539,7 @@
     <script>
         var app = angular.module('ckEditzApp', []);
         
-        app.controller('MainController', function($scope, $timeout, $window) {
+        app.controller('MainController', function($scope, $timeout, $window, $http) {
             // Preloader & Init
             $timeout(function() {
                 $scope.pageLoaded = true;
@@ -747,17 +578,17 @@
 
             // Expanded Services Array
             $scope.services = [
-                { title: 'Meta Ads (FB & IG)', icon: 'fas fa-bullhorn', description: 'Highly targeted Facebook and Instagram ad campaigns to drive quality leads and skyrocket sales.', colorClass: 'text-ck-purple bg-purple-50' },
-                { title: 'Google Ads (PPC)', icon: 'fab fa-google', description: 'Capture high-intent customers actively searching for your services with optimized Google Ads.', colorClass: 'text-ck-cyan bg-cyan-50' },
-                { title: 'GMB Optimization', icon: 'fas fa-map-marked-alt', description: 'Dominate local search results. We optimize your Google My Business profile for local calls and visits.', colorClass: 'text-ck-pink bg-pink-50' },
-                { title: 'Social Media Handling', icon: 'fas fa-hashtag', description: 'Complete management of your social media presence. From content creation to community engagement.', colorClass: 'text-ck-purple bg-purple-50' },
-                { title: 'Video Editing', icon: 'fas fa-video', description: 'Professional video editing for reels, YouTube, and ads to keep your audience engaged and entertained.', colorClass: 'text-ck-cyan bg-cyan-50' },
-                { title: 'Poster Designing', icon: 'fas fa-paint-brush', description: 'Eye-catching, professional graphic designs for your social media pages that stop the scroll.', colorClass: 'text-ck-pink bg-pink-50' },
-                { title: 'Website Design', icon: 'fas fa-laptop-code', description: 'Custom, responsive, and beautiful websites built to convert your visitors into paying customers.', colorClass: 'text-ck-purple bg-purple-50' },
-                { title: 'Landing Page Design', icon: 'fas fa-rocket', description: 'High-converting landing pages specifically designed for your ad campaigns to maximize ROI.', colorClass: 'text-ck-cyan bg-cyan-50' },
-                { title: 'Domain Registration', icon: 'fas fa-globe', description: 'Secure your brand identity online. We help you find and register the perfect domain name.', colorClass: 'text-ck-pink bg-pink-50' },
-                { title: 'Hosting Support', icon: 'fas fa-server', description: 'Reliable and secure web hosting support to keep your website running smoothly 24/7.', colorClass: 'text-ck-purple bg-purple-50' },
-                { title: 'GEM Registration', icon: 'fas fa-file-signature', description: 'Simplify your government business. Hassle-free GEM (Government e-Marketplace) registration assistance.', colorClass: 'text-ck-cyan bg-cyan-50' },
+                { title: 'Meta Ads (FB & IG)', icon: 'fas fa-bullhorn', description: 'Highly targeted Facebook and Instagram ad campaigns to drive quality leads and skyrocket sales.', colorClass: 'text-ck-purple bg-purple-50', url: "{{ route('meta') }}" },
+                { title: 'Google Ads (PPC)', icon: 'fab fa-google', description: 'Capture high-intent customers actively searching for your services with optimized Google Ads.', colorClass: 'text-ck-cyan bg-cyan-50', url: "{{ route('googleads') }}" },
+                { title: 'GMB Optimization', icon: 'fas fa-map-marked-alt', description: 'Dominate local search results. We optimize your Google My Business profile for local calls and visits.', colorClass: 'text-ck-pink bg-pink-50', url: "{{ route('gmb') }}" },
+                { title: 'Social Media Handling', icon: 'fas fa-hashtag', description: 'Complete management of your social media presence. From content creation to community engagement.', colorClass: 'text-ck-purple bg-purple-50', url: "{{ route('socialmediahandling') }}" },
+                { title: 'Video Editing', icon: 'fas fa-video', description: 'Professional video editing for reels, YouTube, and ads to keep your audience engaged and entertained.', colorClass: 'text-ck-cyan bg-cyan-50', url: "{{ route('videoediting') }}" },
+                { title: 'Poster Designing', icon: 'fas fa-paint-brush', description: 'Eye-catching, professional graphic designs for your social media pages that stop the scroll.', colorClass: 'text-ck-pink bg-pink-50', url: "{{ route('posterdesign') }}" },
+                { title: 'Website Design', icon: 'fas fa-laptop-code', description: 'Custom, responsive, and beautiful websites built to convert your visitors into paying customers.', colorClass: 'text-ck-purple bg-purple-50', url: "{{ route('websitedesign') }}" },
+                { title: 'Landing Page Design', icon: 'fas fa-rocket', description: 'High-converting landing pages specifically designed for your ad campaigns to maximize ROI.', colorClass: 'text-ck-cyan bg-cyan-50', url: "{{ route('landingpage') }}" },
+                { title: 'Domain Registration', icon: 'fas fa-globe', description: 'Secure your brand identity online. We help you find and register the perfect domain name.', colorClass: 'text-ck-pink bg-pink-50', url: "{{ route('domainregistration') }}" },
+                { title: 'Hosting Support', icon: 'fas fa-server', description: 'Reliable and secure web hosting support to keep your website running smoothly 24/7.', colorClass: 'text-ck-purple bg-purple-50', url: "{{ route('hostingsupport') }}" },
+                { title: 'GEM Registration', icon: 'fas fa-file-signature', description: 'Simplify your government business. Hassle-free GEM (Government e-Marketplace) registration assistance.', colorClass: 'text-ck-cyan bg-cyan-50', url: "{{ route('gem') }}" },
                 { title: 'Analytics & Tracking', icon: 'fas fa-chart-pie', description: 'Data-driven decisions. We set up advanced tracking to measure every dollar spent and optimize for max ROI.', colorClass: 'text-ck-pink bg-pink-50' }
             ];
 
@@ -785,14 +616,58 @@
 
             $scope.toggleFaq = function(faq) { faq.open = !faq.open; };
 
-            $scope.formData = {};
-            $scope.formSuccess = false;
-            
-            $scope.submitContactForm = function() {
+            $scope.formData = {
+    name: '',
+    email: '',
+    phone: '',
+    subject: '',
+    message: ''
+};
+
+$scope.formSuccess = false;
+$scope.formError = false;
+$scope.sending = false;
+
+$scope.submitContactForm = function () {
+
+    $scope.formSuccess = false;
+    $scope.formError = false;
+    $scope.sending = true;
+
+    $http.post('/contact/send', $scope.formData)
+        .then(function (response) {
+
+            if (response.data.success) {
+
                 $scope.formSuccess = true;
-                $scope.formData = {};
-                $timeout(function() { $scope.formSuccess = false; }, 5000);
-            };
+
+                // Clear form
+                $scope.formData = {
+                    name: '',
+                    email: '',
+                    phone: '',
+                    subject: '',
+                    message: ''
+                };
+
+            } else {
+                $scope.formError = true;
+            }
+
+        })
+        .catch(function (error) {
+
+            console.error('Contact form error:', error);
+
+            $scope.formError = true;
+
+        })
+        .finally(function () {
+
+            $scope.sending = false;
+
+        });
+};
         });
     </script>
 </body>
