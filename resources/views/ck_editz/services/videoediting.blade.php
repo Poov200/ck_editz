@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video Editing | CK Editz</title>
+    <title>Social Media Handling | CK Editz</title>
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -32,15 +32,40 @@
                         'ck-purple': '#8B5CF6',
                         'ck-pink': '#EC4899',
                         'ck-cyan': '#06B6D4',
-                        'ck-dark': '#090014',
+                        'ck-dark': 'rgb(0, 26, 204)', // <-- Applied your new color here!
                     }
                 }
             }
         }
     </script>
     <style>
-        html { scroll-behavior: smooth; }
-        body { font-family: 'Space Grotesk', sans-serif; background-color: #F0F3FF; color: #090014; overflow-x: hidden; cursor: none; }
+        html {
+            width: 100%;
+            max-width: 100%;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+        body {
+            width: 100%;
+            max-width: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: 'Space Grotesk', sans-serif;
+            background-color: #F0F3FF;
+            color: #090014;
+            overflow-x: hidden;
+            cursor: none;
+        }
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+        img,
+        video,
+        iframe {
+            max-width: 100%;
+        }
         h1, h2, h3, h4, h5 { font-family: 'Outfit', sans-serif; }
 
         /* Custom Cursor */
@@ -49,7 +74,7 @@
             transform: translate(-50%, -50%); z-index: 9999; pointer-events: none;
             transition: width 0.3s, height 0.3s, background 0.3s, border-color 0.3s;
         }
-        .cursor-dot { width: 8px; height: 8px; background: #06B6D4; }
+        .cursor-dot { width: 8px; height: 8px; background: #EC4899; }
         .cursor-outline { width: 40px; height: 40px; border: 2px solid #8B5CF6; }
         @media (max-width: 768px) { body { cursor: auto; } .cursor-dot, .cursor-outline { display: none; } }
 
@@ -78,7 +103,7 @@
         .card-3d { transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease; }
         .card-3d:hover {
             transform: translateY(-12px) scale(1.02);
-            box-shadow: 20px 20px 60px rgba(139, 92, 246, 0.2), -10px -10px 40px rgba(6, 182, 212, 0.1);
+            box-shadow: 20px 20px 60px rgba(139, 92, 246, 0.2), -10px -10px 40px rgba(236, 72, 153, 0.1);
         }
         .card-3d:hover .icon-box { transform: rotate(-10deg) scale(1.1); }
         .icon-box { transition: transform 0.4s ease; }
@@ -128,36 +153,38 @@
     @include('ck_editz.navbar')
 
     <!-- ========================================== -->
-    <!-- VIDEO EDITING DEDICATED PAGE CONTENT       -->
+    <!-- SOCIAL MEDIA HANDLING DEDICATED PAGE       -->
     <!-- ========================================== -->
 
     <!-- Hero Section -->
-    <section class="relative pt-40 pb-20 md:pt-48 md:pb-32 bg-ck-dark overflow-hidden">
+    <section class="relative pt-40 pb-20 md:pt-48 md:pb-32  overflow-hidden">
         <div class="absolute inset-0 z-0 pointer-events-none">
-            <div class="absolute top-20 right-10 w-96 h-96 bg-ck-cyan blob filter blur-[120px] opacity-40 animate-float"></div>
+            <div class="absolute top-20 right-10 w-96 h-96 bg-ck-pink blob filter blur-[120px] opacity-40 animate-float"></div>
             <div class="absolute bottom-20 left-10 w-96 h-96 bg-ck-purple blob filter blur-[120px] opacity-40 animate-float" style="animation-delay: 3s;"></div>
         </div>
         <div class="container mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center relative z-10">
-            <div data-aos="fade-up">
-                <a href="/" class="inline-flex items-center gap-2 text-ck-cyan font-bold mb-8 hover:gap-4 transition-all">
+            <!-- Removed data-aos from hero text to prevent layout shift -->
+            <div>
+                <a href="/" class="inline-flex items-center gap-2 text-ck-pink font-bold mb-8 hover:gap-4 transition-all">
                     <i class="fas fa-arrow-left"></i> Back to Services
                 </a>
-                <span class="inline-block px-4 py-2 mb-6 text-xs font-bold rounded-full bg-white/10 text-ck-cyan shadow-lg uppercase tracking-widest border border-cyan-500/20">
-                    ✦ Creative Video Production
+                <span class="inline-block px-4 py-2 mb-6 text-xs font-bold rounded-full bg-white/10 text-ck-pink shadow-lg uppercase tracking-widest border border-pink-500/20">
+                    ✦ Content & Community Management
                 </span>
                 <h1 class="text-5xl md:text-6xl font-display font-extrabold text-white leading-tight mb-6">
-                    Bring Your Story to Life with <span class="animated-text">Professional Video Editing</span>
+                    Grow Your Brand with <span class="animated-text">Social Media Handling</span>
                 </h1>
                 <p class="text-lg text-white/70 mb-10 max-w-xl font-medium">
-                    From viral social media reels to high-converting ad creatives and YouTube vlogs. We craft visually stunning, emotionally engaging videos that captivate your audience from the very first second.
+                    Stop worrying about what to post next. We take full control of your social media presence—from content strategy and creation to posting and engaging with your followers.
                 </p>
                 <a href="#cta" class="inline-flex items-center gap-2 btn-magic text-white px-8 py-4 rounded-full font-bold text-sm uppercase tracking-wider">
-                    Start Editing <i class="fas fa-video"></i>
+                    Grow My Social Media <i class="fas fa-hashtag"></i>
                 </a>
             </div>
-            <div class="relative hidden md:block" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="300">
-                <div class="absolute -inset-4 bg-gradient-to-tr from-ck-cyan via-ck-purple to-ck-pink blob opacity-80 blur-lg"></div>
-                <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?q=80&w=1973&auto=format&fit=crop" alt="Video Editing Studio" class="relative w-full h-[450px] object-cover rounded-[3rem] border-4 border-white/10">
+            <!-- Removed data-aos from hero image to prevent layout shift -->
+            <div class="relative hidden md:block">
+                <div class="absolute -inset-4 bg-gradient-to-tr from-ck-pink via-ck-purple to-ck-cyan blob opacity-80 blur-lg"></div>
+                <img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?q=80&w=1974&auto=format&fit=crop" alt="Social Media" class="relative w-full h-[450px] object-cover rounded-[3rem] border-4 border-white/10">
             </div>
         </div>
     </section>
@@ -166,111 +193,111 @@
     <section class="py-24 bg-ck-bg">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16" data-aos="fade-up">
-                <span class="text-ck-purple font-bold uppercase tracking-[0.3em] text-xs">Why Use Video?</span>
-                <h2 class="text-4xl md:text-5xl font-display mt-4 text-ck-dark font-extrabold">The Power of <span class="animated-text">Video Content</span></h2>
-                <p class="text-ck-dark/60 mt-4 max-w-2xl mx-auto font-medium">Video is the most consumed and shared content format on the internet. Don't get left behind.</p>
+                <span class="text-ck-purple font-bold uppercase tracking-[0.3em] text-xs">Why Choose Our Service?</span>
+                <h2 class="text-4xl md:text-5xl font-display mt-4 text-ck-dark font-extrabold">Benefits of <span class="animated-text">Social Media Management</span></h2>
+                <p class="text-ck-dark/60 mt-4 max-w-2xl mx-auto font-medium">A strong social media presence builds trust, loyalty, and keeps your brand top-of-mind for your customers.</p>
             </div>
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="bg-white p-8 rounded-3xl shadow-sm border border-cyan-100 card-3d" data-aos="fade-up">
-                    <div class="icon-box w-16 h-16 bg-cyan-50 rounded-2xl flex items-center justify-center text-3xl mb-6 text-ck-cyan">
-                        <i class="fas fa-eye"></i>
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-pink-100 card-3d" data-aos="fade-up">
+                    <div class="icon-box w-16 h-16 bg-pink-50 rounded-2xl flex items-center justify-center text-3xl mb-6 text-ck-pink">
+                        <i class="fas fa-bell"></i>
                     </div>
-                    <h3 class="text-xl font-display font-bold text-ck-dark mb-3">Max Engagement</h3>
-                    <p class="text-ck-dark/60 font-medium">Videos capture attention instantly and keep viewers on your page or profile much longer than static images.</p>
+                    <h3 class="text-xl font-display font-bold text-ck-dark mb-3">Brand Awareness</h3>
+                    <p class="text-ck-dark/60 font-medium">Stay relevant. Consistent, high-quality posting ensures your brand is always in front of your target audience.</p>
                 </div>
                 <div class="bg-white p-8 rounded-3xl shadow-sm border border-purple-100 card-3d" data-aos="fade-up" data-aos-delay="100">
                     <div class="icon-box w-16 h-16 bg-purple-50 rounded-2xl flex items-center justify-center text-3xl mb-6 text-ck-purple">
-                        <i class="fas fa-bullhorn"></i>
+                        <i class="fas fa-handshake"></i>
                     </div>
-                    <h3 class="text-xl font-display font-bold text-ck-dark mb-3">Higher Conversions</h3>
-                    <p class="text-ck-dark/60 font-medium">Including a video on your landing page or ad can increase conversion rates by over 80%.</p>
+                    <h3 class="text-xl font-display font-bold text-ck-dark mb-3">Customer Loyalty</h3>
+                    <p class="text-ck-dark/60 font-medium">Build a community. We engage with your followers, reply to comments, and turn them into brand advocates.</p>
                 </div>
-                <div class="bg-white p-8 rounded-3xl shadow-sm border border-pink-100 card-3d" data-aos="fade-up" data-aos-delay="200">
-                    <div class="icon-box w-16 h-16 bg-pink-50 rounded-2xl flex items-center justify-center text-3xl mb-6 text-ck-pink">
-                        <i class="fas fa-share-alt"></i>
-                    </div>
-                    <h3 class="text-xl font-display font-bold text-ck-dark mb-3">Viral Potential</h3>
-                    <p class="text-ck-dark/60 font-medium">Creative, emotionally driven videos are shared 1200% more times than text and image posts combined.</p>
-                </div>
-                <div class="bg-white p-8 rounded-3xl shadow-sm border border-cyan-100 card-3d" data-aos="fade-up" data-aos-delay="300">
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-cyan-100 card-3d" data-aos="fade-up" data-aos-delay="200">
                     <div class="icon-box w-16 h-16 bg-cyan-50 rounded-2xl flex items-center justify-center text-3xl mb-6 text-ck-cyan">
-                        <i class="fas fa-brain"></i>
+                        <i class="fas fa-clock"></i>
                     </div>
-                    <h3 class="text-xl font-display font-bold text-ck-dark mb-3">Brand Recall</h3>
-                    <p class="text-ck-dark/60 font-medium">Viewers retain 95% of a message when they watch it in a video, compared to 10% when reading text.</p>
+                    <h3 class="text-xl font-display font-bold text-ck-dark mb-3">Save Time</h3>
+                    <p class="text-ck-dark/60 font-medium">Focus on running your business. We handle the time-consuming work of content planning, creation, and posting.</p>
+                </div>
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-pink-100 card-3d" data-aos="fade-up" data-aos-delay="300">
+                    <div class="icon-box w-16 h-16 bg-pink-50 rounded-2xl flex items-center justify-center text-3xl mb-6 text-ck-pink">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="text-xl font-display font-bold text-ck-dark mb-3">Consistent Growth</h3>
+                    <p class="text-ck-dark/60 font-medium">Strategic content calendars designed to increase your followers, reach, and website traffic organically.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Types of Videos We Edit Section -->
+    <!-- What We Handle Section -->
     <section class="py-24 bg-white">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16" data-aos="fade-up">
-                <span class="text-ck-pink font-bold uppercase tracking-[0.3em] text-xs">Our Expertise</span>
-                <h2 class="text-4xl md:text-5xl font-display mt-4 text-ck-dark font-extrabold">Types of Videos <span class="animated-text">We Edit</span></h2>
-                <p class="text-ck-dark/60 mt-4 max-w-2xl mx-auto font-medium">We handle everything from short-form social media content to long-form professional videos.</p>
+                <span class="text-ck-cyan font-bold uppercase tracking-[0.3em] text-xs">Our Scope of Work</span>
+                <h2 class="text-4xl md:text-5xl font-display mt-4 text-ck-dark font-extrabold">What We <span class="animated-text">Handle For You</span></h2>
+                <p class="text-ck-dark/60 mt-4 max-w-2xl mx-auto font-medium">A complete, done-for-you social media management service.</p>
             </div>
             <div class="grid md:grid-cols-2 gap-8">
-                <div class="flex items-start gap-6 bg-ck-bg p-8 rounded-3xl border border-cyan-100" data-aos="fade-right">
-                    <div class="w-16 h-16 bg-gradient-to-br from-ck-cyan to-ck-purple rounded-2xl flex items-center justify-center text-2xl text-white flex-shrink-0 shadow-lg"><i class="fas fa-mobile-alt"></i></div>
+                <div class="flex items-start gap-6 bg-ck-bg p-8 rounded-3xl border border-pink-100" data-aos="fade-right">
+                    <div class="w-16 h-16 bg-gradient-to-br from-ck-pink to-ck-purple rounded-2xl flex items-center justify-center text-2xl text-white flex-shrink-0 shadow-lg"><i class="fas fa-lightbulb"></i></div>
                     <div>
-                        <h3 class="text-xl font-display font-bold text-ck-dark mb-2">Reels & TikToks</h3>
-                        <p class="text-ck-dark/60 font-medium">Fast-paced, trendy, and engaging vertical videos with captions, transitions, and trending audio.</p>
+                        <h3 class="text-xl font-display font-bold text-ck-dark mb-2">Content Strategy</h3>
+                        <p class="text-ck-dark/60 font-medium">We develop a monthly content calendar tailored to your brand voice, goals, and trending topics.</p>
                     </div>
                 </div>
                 <div class="flex items-start gap-6 bg-ck-bg p-8 rounded-3xl border border-purple-100" data-aos="fade-left">
-                    <div class="w-16 h-16 bg-gradient-to-br from-ck-purple to-ck-pink rounded-2xl flex items-center justify-center text-2xl text-white flex-shrink-0 shadow-lg"><i class="fab fa-youtube"></i></div>
+                    <div class="w-16 h-16 bg-gradient-to-br from-ck-purple to-ck-cyan rounded-2xl flex items-center justify-center text-2xl text-white flex-shrink-0 shadow-lg"><i class="fas fa-pen-fancy"></i></div>
                     <div>
-                        <h3 class="text-xl font-display font-bold text-ck-dark mb-2">YouTube Videos & Vlogs</h3>
-                        <p class="text-ck-dark/60 font-medium">Complete long-form editing including color grading, sound mixing, jump cuts, and effects.</p>
+                        <h3 class="text-xl font-display font-bold text-ck-dark mb-2">Copywriting</h3>
+                        <p class="text-ck-dark/60 font-medium">Engaging captions and hooks crafted to maximize reach, encourage sharing, and drive action.</p>
                     </div>
                 </div>
-                <div class="flex items-start gap-6 bg-ck-bg p-8 rounded-3xl border border-pink-100" data-aos="fade-right">
-                    <div class="w-16 h-16 bg-gradient-to-br from-ck-pink to-ck-cyan rounded-2xl flex items-center justify-center text-2xl text-white flex-shrink-0 shadow-lg"><i class="fas fa-film"></i></div>
+                <div class="flex items-start gap-6 bg-ck-bg p-8 rounded-3xl border border-cyan-100" data-aos="fade-right">
+                    <div class="w-16 h-16 bg-gradient-to-br from-ck-cyan to-ck-pink rounded-2xl flex items-center justify-center text-2xl text-white flex-shrink-0 shadow-lg"><i class="fas fa-calendar-check"></i></div>
                     <div>
-                        <h3 class="text-xl font-display font-bold text-ck-dark mb-2">Promotional Ads</h3>
-                        <p class="text-ck-dark/60 font-medium">High-converting ad creatives for Facebook and Google Ads designed to stop the scroll.</p>
+                        <h3 class="text-xl font-display font-bold text-ck-dark mb-2">Scheduling & Posting</h3>
+                        <p class="text-ck-dark/60 font-medium">We post at the optimal times for maximum engagement, so you never miss a beat.</p>
                     </div>
                 </div>
-                <div class="flex items-start gap-6 bg-ck-bg p-8 rounded-3xl border border-cyan-100" data-aos="fade-left">
-                    <div class="w-16 h-16 bg-gradient-to-br from-ck-cyan to-ck-purple rounded-2xl flex items-center justify-center text-2xl text-white flex-shrink-0 shadow-lg"><i class="fas fa-shapes"></i></div>
+                <div class="flex items-start gap-6 bg-ck-bg p-8 rounded-3xl border border-pink-100" data-aos="fade-left">
+                    <div class="w-16 h-16 bg-gradient-to-br from-ck-pink to-ck-purple rounded-2xl flex items-center justify-center text-2xl text-white flex-shrink-0 shadow-lg"><i class="fas fa-comments"></i></div>
                     <div>
-                        <h3 class="text-xl font-display font-bold text-ck-dark mb-2">Motion Graphics</h3>
-                        <p class="text-ck-dark/60 font-medium">Custom intros, animated logos, text animations, and visual effects to elevate your brand.</p>
+                        <h3 class="text-xl font-display font-bold text-ck-dark mb-2">Community Management</h3>
+                        <p class="text-ck-dark/60 font-medium">We reply to comments and DMs, building relationships and keeping your audience engaged.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Process for Video Editing -->
+    <!-- Process for Social Media -->
     <section class="py-24 bg-ck-bg">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16" data-aos="fade-up">
-                <span class="text-ck-cyan font-bold uppercase tracking-[0.3em] text-xs">Our Strategy</span>
-                <h2 class="text-4xl md:text-5xl font-display mt-4 text-ck-dark font-extrabold">How We <span class="animated-text">Edit Videos</span></h2>
+                <span class="text-ck-purple font-bold uppercase tracking-[0.3em] text-xs">Our Strategy</span>
+                <h2 class="text-4xl md:text-5xl font-display mt-4 text-ck-dark font-extrabold">How We <span class="animated-text">Manage Accounts</span></h2>
             </div>
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="text-center p-6 bg-white rounded-3xl border border-cyan-100 shadow-sm" data-aos="fade-up">
-                    <div class="w-16 h-16 mx-auto bg-gradient-to-br from-ck-cyan to-ck-purple rounded-full flex items-center justify-center text-2xl mb-4 font-display font-bold text-white shadow-lg">1</div>
-                    <h4 class="text-lg font-display font-bold mb-2 text-ck-dark">Footage Review</h4>
-                    <p class="text-ck-dark/60 text-sm font-medium">We collect your raw footage, analyze it, and plan the perfect narrative flow.</p>
+                <div class="text-center p-6 bg-white rounded-3xl border border-pink-100 shadow-sm" data-aos="fade-up">
+                    <div class="w-16 h-16 mx-auto bg-gradient-to-br from-ck-pink to-ck-purple rounded-full flex items-center justify-center text-2xl mb-4 font-display font-bold text-white shadow-lg">1</div>
+                    <h4 class="text-lg font-display font-bold mb-2 text-ck-dark">Profile Audit</h4>
+                    <p class="text-ck-dark/60 text-sm font-medium">We review your current social profiles, optimize bios, and ensure brand consistency.</p>
                 </div>
                 <div class="text-center p-6 bg-white rounded-3xl border border-purple-100 shadow-sm" data-aos="fade-up" data-aos-delay="200">
-                    <div class="w-16 h-16 mx-auto bg-gradient-to-br from-ck-purple to-ck-pink rounded-full flex items-center justify-center text-2xl mb-4 font-display font-bold text-white shadow-lg">2</div>
-                    <h4 class="text-lg font-display font-bold mb-2 text-ck-dark">Cutting & Audio</h4>
-                    <p class="text-ck-dark/60 text-sm font-medium">We cut out the fluff, sync audio, add background music, and perform noise reduction.</p>
+                    <div class="w-16 h-16 mx-auto bg-gradient-to-br from-ck-purple to-ck-cyan rounded-full flex items-center justify-center text-2xl mb-4 font-display font-bold text-white shadow-lg">2</div>
+                    <h4 class="text-lg font-display font-bold mb-2 text-ck-dark">Content Creation</h4>
+                    <p class="text-ck-dark/60 text-sm font-medium">Our team designs graphics, writes copy, and edits videos/reels for the month ahead.</p>
                 </div>
-                <div class="text-center p-6 bg-white rounded-3xl border border-pink-100 shadow-sm" data-aos="fade-up" data-aos-delay="400">
-                    <div class="w-16 h-16 mx-auto bg-gradient-to-br from-ck-pink to-ck-cyan rounded-full flex items-center justify-center text-2xl mb-4 font-display font-bold text-white shadow-lg">3</div>
-                    <h4 class="text-lg font-display font-bold mb-2 text-ck-dark">Color & Effects</h4>
-                    <p class="text-ck-dark/60 text-sm font-medium">Cinematic color grading, transitions, text overlays, and motion graphics are added.</p>
+                <div class="text-center p-6 bg-white rounded-3xl border border-cyan-100 shadow-sm" data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-16 h-16 mx-auto bg-gradient-to-br from-ck-cyan to-ck-pink rounded-full flex items-center justify-center text-2xl mb-4 font-display font-bold text-white shadow-lg">3</div>
+                    <h4 class="text-lg font-display font-bold mb-2 text-ck-dark">Publishing</h4>
+                    <p class="text-ck-dark/60 text-sm font-medium">We schedule posts at peak engagement times across Facebook, Instagram, and more.</p>
                 </div>
-                <div class="text-center p-6 bg-white rounded-3xl border border-cyan-100 shadow-sm" data-aos="fade-up" data-aos-delay="600">
-                    <div class="w-16 h-16 mx-auto bg-gradient-to-br from-ck-cyan to-ck-purple rounded-full flex items-center justify-center text-2xl mb-4 font-display font-bold text-white shadow-lg">4</div>
-                    <h4 class="text-lg font-display font-bold mb-2 text-ck-dark">Revisions & Delivery</h4>
-                    <p class="text-ck-dark/60 text-sm font-medium">We send the draft for review, make necessary tweaks, and deliver the final 4K video.</p>
+                <div class="text-center p-6 bg-white rounded-3xl border border-pink-100 shadow-sm" data-aos="fade-up" data-aos-delay="600">
+                    <div class="w-16 h-16 mx-auto bg-gradient-to-br from-ck-pink to-ck-purple rounded-full flex items-center justify-center text-2xl mb-4 font-display font-bold text-white shadow-lg">4</div>
+                    <h4 class="text-lg font-display font-bold mb-2 text-ck-dark">Reporting</h4>
+                    <p class="text-ck-dark/60 text-sm font-medium">We provide monthly analytics reports showing growth, reach, and engagement metrics.</p>
                 </div>
             </div>
         </div>
@@ -278,10 +305,10 @@
 
     <!-- CTA Section -->
     <section id="cta" class="py-20 bg-ck-dark relative overflow-hidden">
-        <div class="absolute top-0 left-1/2 w-96 h-96 bg-ck-cyan blob filter blur-[150px] opacity-30"></div>
+        <div class="absolute top-0 left-1/2 w-96 h-96 bg-ck-pink blob filter blur-[150px] opacity-30"></div>
         <div class="container mx-auto px-6 text-center relative z-10" data-aos="zoom-in">
-            <h2 class="text-3xl md:text-5xl font-display font-extrabold text-white mb-6">Ready to Create <span class="animated-text">Viral Videos?</span></h2>
-            <p class="text-white/70 max-w-2xl mx-auto mb-8 text-lg font-medium">Let our creative editing team bring your raw footage to life. Get a free consultation and quote today.</p>
+            <h2 class="text-3xl md:text-5xl font-display font-extrabold text-white mb-6">Ready to Grow Your <span class="animated-text">Social Media?</span></h2>
+            <p class="text-white/70 max-w-2xl mx-auto mb-8 text-lg font-medium">Let our creative team take over your accounts. Get a free social media audit and strategy session today.</p>
             <!-- Change href to your main index.html contact section -->
             <a href="index.html#contact" class="inline-flex items-center gap-2 btn-magic text-white px-8 py-4 rounded-full font-bold text-sm uppercase tracking-wider">
                 Get Free Consultation <i class="fas fa-arrow-right"></i>
@@ -290,7 +317,7 @@
     </section>
 
     <!-- ========================================== -->
-    <!-- END VIDEO EDITING PAGE CONTENT             -->
+    <!-- END SOCIAL MEDIA HANDLING PAGE CONTENT     -->
     <!-- ========================================== -->
 
     @include('ck_editz.footer')
@@ -305,8 +332,21 @@
         var app = angular.module('ckEditzApp', []);
         
         app.controller('MainController', function($scope, $timeout, $window) {
-            // Init AOS
-            AOS.init({ duration: 1000, once: true, offset: 100, easing: 'ease-out-cubic' });
+            // Init AOS after the complete page is loaded to prevent layout shifts
+            $timeout(function () {
+                if (typeof AOS !== 'undefined') {
+                    AOS.init({
+                        duration: 1000,
+                        once: true,
+                        offset: 100,
+                        easing: 'ease-out-cubic',
+                        disable: false
+                    });
+
+                    // Force AOS to calculate positions again
+                    AOS.refreshHard();
+                }
+            }, 300);
 
             // Custom Cursor Tracking
             $scope.mouseX = 0;

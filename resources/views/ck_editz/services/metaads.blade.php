@@ -39,8 +39,33 @@
         }
     </script>
     <style>
-        html { scroll-behavior: smooth; }
-        body { font-family: 'Space Grotesk', sans-serif; background-color: #F0F3FF; color: #090014; overflow-x: hidden; cursor: none; }
+        html {
+            width: 100%;
+            max-width: 100%;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+        body {
+            width: 100%;
+            max-width: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: 'Space Grotesk', sans-serif;
+            background-color: #F0F3FF;
+            color: #090014;
+            overflow-x: hidden;
+            cursor: none;
+        }
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+        img,
+        video,
+        iframe {
+            max-width: 100%;
+        }
         h1, h2, h3, h4, h5 { font-family: 'Outfit', sans-serif; }
 
         /* Custom Cursor */
@@ -132,13 +157,14 @@
     <!-- ========================================== -->
 
     <!-- Hero Section -->
-    <section class="relative pt-40 pb-20 md:pt-48 md:pb-32 bg-ck-dark overflow-hidden">
+    <section class="relative pt-40 pb-20 md:pt-48 md:pb-32  overflow-hidden">
         <div class="absolute inset-0 z-0 pointer-events-none">
             <div class="absolute top-20 right-10 w-96 h-96 bg-ck-purple blob filter blur-[120px] opacity-40 animate-float"></div>
             <div class="absolute bottom-20 left-10 w-96 h-96 bg-ck-pink blob filter blur-[120px] opacity-40 animate-float" style="animation-delay: 3s;"></div>
         </div>
         <div class="container mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center relative z-10">
-            <div data-aos="fade-up">
+            <!-- Removed data-aos from hero text to prevent layout shift -->
+            <div>
                 <a href="/" class="inline-flex items-center gap-2 text-ck-pink font-bold mb-8 hover:gap-4 transition-all">
                     <i class="fas fa-arrow-left"></i> Back to Services
                 </a>
@@ -155,7 +181,8 @@
                     Start Your Campaign <i class="fas fa-rocket"></i>
                 </a>
             </div>
-            <div class="relative hidden md:block" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="300">
+            <!-- Removed data-aos from hero image to prevent layout shift -->
+            <div class="relative hidden md:block">
                 <div class="absolute -inset-4 bg-gradient-to-tr from-ck-purple via-ck-pink to-ck-cyan blob opacity-80 blur-lg"></div>
                 <img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?q=80&w=1974&auto=format&fit=crop" alt="Meta Ads" class="relative w-full h-[450px] object-cover rounded-[3rem] border-4 border-white/10">
             </div>
@@ -305,8 +332,21 @@
         var app = angular.module('ckEditzApp', []);
         
         app.controller('MainController', function($scope, $timeout, $window) {
-            // Init AOS
-            AOS.init({ duration: 1000, once: true, offset: 100, easing: 'ease-out-cubic' });
+            // Init AOS after the complete page is loaded to prevent layout shifts
+            $timeout(function () {
+                if (typeof AOS !== 'undefined') {
+                    AOS.init({
+                        duration: 1000,
+                        once: true,
+                        offset: 100,
+                        easing: 'ease-out-cubic',
+                        disable: false
+                    });
+
+                    // Force AOS to calculate positions again
+                    AOS.refreshHard();
+                }
+            }, 300);
 
             // Custom Cursor Tracking
             $scope.mouseX = 0;
