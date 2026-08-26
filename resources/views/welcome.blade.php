@@ -40,8 +40,33 @@
         }
     </script>
     <style>
-        html { scroll-behavior: smooth; }
-        body { font-family: 'Space Grotesk', sans-serif; background-color: #F0F3FF; color: #090014; overflow-x: hidden; cursor: none; }
+        html {
+            width: 100%;
+            max-width: 100%;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+        body {
+            width: 100%;
+            max-width: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: 'Space Grotesk', sans-serif;
+            background-color: #F0F3FF;
+            color: #090014;
+            overflow-x: hidden;
+            cursor: none;
+        }
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+        img,
+        video,
+        iframe {
+            max-width: 100%;
+        }
         h1, h2, h3, h4, h5 { font-family: 'Outfit', sans-serif; }
 
         /* Custom Cursor */
@@ -105,14 +130,14 @@
         }
 
         /* Navbar Shrink */
-        .nav-scrolled {
+         .nav-scrolled {
             padding-top: 0.5rem !important; padding-bottom: 0.5rem !important;
             background: rgba(240, 243, 255, 0.8) !important; backdrop-filter: blur(16px);
             box-shadow: 0 4px 30px rgba(0,0,0,0.05);
         }
 
         /* Mobile Menu */
-        .mobile-menu { transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1); }
+        .mobile-menu { transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1); } 
 
         /* Preloader */
         .preloader { position: fixed; inset: 0; background: #F0F3FF; z-index: 9999; display: flex; align-items: center; justify-content: center; transition: opacity 0.8s ease; }
@@ -154,7 +179,8 @@
         </div>
 
         <div class="container mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center relative z-10">
-            <div data-aos="fade-up" data-aos-duration="1000">
+            <!-- Removed data-aos from hero text to prevent layout shift -->
+            <div>
                 <span class="inline-block px-4 py-2 mb-6 text-xs font-bold rounded-full bg-white text-ck-purple shadow-lg shadow-purple-500/10 border border-purple-100 uppercase tracking-widest">
                     ✦ 360° Digital Solutions
                 </span>
@@ -175,10 +201,11 @@
                 </div>
             </div>
             
-            <div class="relative hidden md:block" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="300">
+            <!-- Removed data-aos from hero image to prevent layout shift -->
+            <div class="relative hidden md:block">
                 <div class="absolute -inset-4 bg-gradient-to-tr from-ck-purple via-ck-pink to-ck-cyan blob opacity-80 blur-lg"></div>
                 <div class="relative animate-float">
-                    <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=2070&auto=format&fit=crop" alt="Digital Agency" class="relative w-full h-[400px] object-cover rounded-[3rem] border-4 border-white shadow-2xl">
+                    <img src="{{ asset('img/headerimg.png') }}" alt="Digital Agency" class="relative w-full h-[400px] object-cover rounded-[3rem] border-4 border-white shadow-2xl">
                 </div>
                 <div class="absolute -bottom-10 -left-10 bg-white p-6 rounded-2xl shadow-2xl flex items-center gap-4 w-72 animate-float border border-purple-100" style="animation-delay: 1s;">
                     <div class="w-12 h-12 bg-gradient-to-br from-ck-purple to-ck-pink rounded-full flex items-center justify-center text-white text-xl shadow-lg">
@@ -216,15 +243,30 @@
                 </div>
             </div>
             <div data-aos="fade-left">
-                <span class="text-ck-pink font-bold uppercase tracking-[0.3em] text-xs">About CK Editz</span>
-                <h2 class="text-4xl md:text-5xl font-display mt-4 mb-8 text-ck-dark font-extrabold">
-    We Don't Just Build Brands. <br>
-    <span class="animated-text">We Build Growth.</span>
-</h2>
+    <span class="text-ck-pink font-bold uppercase tracking-[0.3em] text-xs">
+        About CK Editz
+    </span>
 
-<p class="text-ck-dark/70 mb-6 text-lg font-medium leading-relaxed">
-    At CK Editz Digital Solutions, we combine technology, creativity, and digital marketing to build a complete online presence for your business. From professional websites and landing pages to Meta & Google Ads, Google Business Profile management, social media handling, content creation, video editing, branding, and GeM registration — we deliver everything you need to attract customers, generate leads, and grow your business.
-</p>
+    <h2 class="text-4xl md:text-5xl font-display mt-4 mb-8 text-ck-dark font-extrabold">
+        We Don't Just Build Brands. <br>
+        <span class="animated-text">We Build Businesses for the Digital World.</span>
+    </h2>
+
+    <p class="text-ck-dark/70 mb-6 text-lg font-medium leading-relaxed">
+        In today's competitive market, being online is no longer enough.
+        Your business needs to be <strong>visible, credible, memorable and easy to choose.</strong>
+    </p>
+
+    <p class="text-ck-dark/70 mb-6 text-lg font-medium leading-relaxed">
+        At <strong>CK Editz Digital Solutions</strong>, we help businesses build a powerful digital presence by bringing together
+        <strong>strategy, technology, creativity and performance marketing</strong> under one roof.
+    </p>
+
+    <p class="text-ck-dark/70 mb-6 text-lg font-medium leading-relaxed">
+        From your first website to your next lead-generation campaign, we create digital solutions designed around your
+        <strong>business objectives and growth.</strong>
+    </p>
+
                 <div class="grid grid-cols-2 gap-6 mb-8">
                     <div class="flex items-start gap-4">
                         <div class="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center text-ck-purple text-xl flex-shrink-0">
@@ -232,7 +274,7 @@
                         </div>
                         <div>
                             <h4 class="text-lg font-display font-bold text-ck-dark">Startup Ready</h4>
-                            <p class="text-ck-dark/60 text-sm font-medium">GEM, Domain, & Web setup.</p>
+                            <p class="text-ck-dark/60 text-sm font-medium">Domain, & Web setup.</p>
                         </div>
                     </div>
                     <div class="flex items-start gap-4">
@@ -534,6 +576,7 @@
     <button ng-if="scrolled" ng-click="scrollToTop()" class="fixed bottom-8 right-8 w-14 h-14 btn-magic text-white rounded-full shadow-lg flex items-center justify-center z-50 animate-bounce">
         <i class="fas fa-arrow-up"></i>
     </button>
+    @include('ck_editz.whatsapp-button')
 
     <!-- AngularJS Script -->
     <script>
@@ -543,8 +586,23 @@
             // Preloader & Init
             $timeout(function() {
                 $scope.pageLoaded = true;
-                AOS.init({ duration: 1000, once: true, offset: 100, easing: 'ease-out-cubic' });
             }, 1000);
+
+            // Init AOS after the complete page is loaded to prevent layout shifts
+            $timeout(function () {
+                if (typeof AOS !== 'undefined') {
+                    AOS.init({
+                        duration: 1000,
+                        once: true,
+                        offset: 100,
+                        easing: 'ease-out-cubic',
+                        disable: false
+                    });
+
+                    // Force AOS to calculate positions again
+                    AOS.refreshHard();
+                }
+            }, 300);
 
             // Custom Cursor Tracking
             $scope.mouseX = 0;
@@ -589,7 +647,7 @@
                 { title: 'Domain Registration', icon: 'fas fa-globe', description: 'Secure your brand identity online. We help you find and register the perfect domain name.', colorClass: 'text-ck-pink bg-pink-50', url: "{{ route('domainregistration') }}" },
                 { title: 'Hosting Support', icon: 'fas fa-server', description: 'Reliable and secure web hosting support to keep your website running smoothly 24/7.', colorClass: 'text-ck-purple bg-purple-50', url: "{{ route('hostingsupport') }}" },
                 { title: 'GEM Registration', icon: 'fas fa-file-signature', description: 'Simplify your government business. Hassle-free GEM (Government e-Marketplace) registration assistance.', colorClass: 'text-ck-cyan bg-cyan-50', url: "{{ route('gem') }}" },
-                { title: 'Analytics & Tracking', icon: 'fas fa-chart-pie', description: 'Data-driven decisions. We set up advanced tracking to measure every dollar spent and optimize for max ROI.', colorClass: 'text-ck-pink bg-pink-50' }
+                
             ];
 
             $scope.portfolio = [
@@ -617,57 +675,57 @@
             $scope.toggleFaq = function(faq) { faq.open = !faq.open; };
 
             $scope.formData = {
-    name: '',
-    email: '',
-    phone: '',
-    subject: '',
-    message: ''
-};
+                name: '',
+                email: '',
+                phone: '',
+                subject: '',
+                message: ''
+            };
 
-$scope.formSuccess = false;
-$scope.formError = false;
-$scope.sending = false;
-
-$scope.submitContactForm = function () {
-
-    $scope.formSuccess = false;
-    $scope.formError = false;
-    $scope.sending = true;
-
-    $http.post('/contact/send', $scope.formData)
-        .then(function (response) {
-
-            if (response.data.success) {
-
-                $scope.formSuccess = true;
-
-                // Clear form
-                $scope.formData = {
-                    name: '',
-                    email: '',
-                    phone: '',
-                    subject: '',
-                    message: ''
-                };
-
-            } else {
-                $scope.formError = true;
-            }
-
-        })
-        .catch(function (error) {
-
-            console.error('Contact form error:', error);
-
-            $scope.formError = true;
-
-        })
-        .finally(function () {
-
+            $scope.formSuccess = false;
+            $scope.formError = false;
             $scope.sending = false;
 
-        });
-};
+            $scope.submitContactForm = function () {
+
+                $scope.formSuccess = false;
+                $scope.formError = false;
+                $scope.sending = true;
+
+                $http.post('/contact/send', $scope.formData)
+                    .then(function (response) {
+
+                        if (response.data.success) {
+
+                            $scope.formSuccess = true;
+
+                            // Clear form
+                            $scope.formData = {
+                                name: '',
+                                email: '',
+                                phone: '',
+                                subject: '',
+                                message: ''
+                            };
+
+                        } else {
+                            $scope.formError = true;
+                        }
+
+                    })
+                    .catch(function (error) {
+
+                        console.error('Contact form error:', error);
+
+                        $scope.formError = true;
+
+                    })
+                    .finally(function () {
+
+                        $scope.sending = false;
+
+                    });
+            };
         });
     </script>
 </body>

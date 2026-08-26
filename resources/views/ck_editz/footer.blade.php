@@ -28,11 +28,6 @@
 
                 </div>
 
-                <p class="text-white/60 font-medium mb-5">
-                    Your all-in-one digital partner. From marketing to web hosting,
-                    we grow your business online.
-                </p>
-
                 <!-- Contact Information -->
                 <div class="space-y-4 text-sm">
 
@@ -176,8 +171,6 @@
 
             <p>
                 &copy; @{{currentYear}} CK Editz. All Rights Reserved.
-                Designed with
-                <i class="fas fa-heart text-ck-pink"></i>
             </p>
 
         </div>
