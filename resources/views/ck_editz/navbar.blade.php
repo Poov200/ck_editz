@@ -147,7 +147,7 @@
                         <!-- META ADS -->
 
                         <a
-                            href="{{ route('meta') }}"
+                            href="{{ url('/') }}#contact"
                             class="service-menu-item">
 
                             <span class="service-icon">
@@ -162,7 +162,7 @@
                         <!-- GOOGLE ADS -->
 
                         <a
-                            href="{{ route('googleads') }}"
+                            href="{{ url('/') }}#contact"
                             class="service-menu-item">
 
                             <span class="service-icon">
@@ -177,7 +177,7 @@
                         <!-- GMB -->
 
                         <a
-                            href="{{ route('gmb') }}"
+                            href="{{ url('/') }}#contact"
                             class="service-menu-item">
 
                             <span class="service-icon">
@@ -192,7 +192,7 @@
                         <!-- SOCIAL MEDIA -->
 
                         <a
-                            href="{{ route('socialmediahandling') }}"
+                            href="{{ url('/') }}#contact"
                             class="service-menu-item">
 
                             <span class="service-icon">
@@ -207,7 +207,7 @@
                         <!-- VIDEO EDITING -->
 
                         <a
-                            href="{{ route('videoediting') }}"
+                            href="{{ url('/') }}#contact"
                             class="service-menu-item">
 
                             <span class="service-icon">
@@ -222,7 +222,7 @@
                         <!-- POSTER DESIGN -->
 
                         <a
-                            href="{{ route('posterdesign') }}"
+                            href="{{ url('/') }}#contact"
                             class="service-menu-item">
 
                             <span class="service-icon">
@@ -237,7 +237,7 @@
                         <!-- WEBSITE DESIGN -->
 
                         <a
-                            href="{{ route('websitedesign') }}"
+                            href="{{ url('/') }}#contact"
                             class="service-menu-item">
 
                             <span class="service-icon">
@@ -252,7 +252,7 @@
                         <!-- LANDING PAGE -->
 
                         <a
-                            href="{{ route('landingpage') }}"
+                            href="{{ url('/') }}#contact"
                             class="service-menu-item">
 
                             <span class="service-icon">
@@ -267,7 +267,7 @@
                         <!-- DOMAIN -->
 
                         <a
-                            href="{{ route('domainregistration') }}"
+                            href="{{ url('/') }}#contact"
                             class="service-menu-item">
 
                             <span class="service-icon">
@@ -282,7 +282,7 @@
                         <!-- HOSTING -->
 
                         <a
-                            href="{{ route('hostingsupport') }}"
+                            href="{{ url('/') }}#contact"
                             class="service-menu-item">
 
                             <span class="service-icon">
@@ -297,7 +297,7 @@
                         <!-- GEM -->
 
                         <a
-                            href="{{ route('gem') }}"
+                            href="{{ url('/') }}#contact"
                             class="service-menu-item">
 
                             <span class="service-icon">

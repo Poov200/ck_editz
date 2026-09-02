@@ -36,7 +36,7 @@
                         <i class="fas fa-map-marker-alt text-ck-pink mt-1"></i>
 
                         <span class="leading-relaxed">
-                            No 6/10, Second Floor,<br>
+                            No 10/6, First Floor,<br>
                             2nd Main Road, Vijayanagar,<br>
                             Velachery, Chennai
                         </span>
