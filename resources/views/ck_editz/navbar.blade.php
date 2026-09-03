@@ -308,6 +308,18 @@
 
                         </a>
 
+                        <a
+                            href="{{ url('/') }}#contact"
+                            class="service-menu-item">
+
+                            <span class="service-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </span>
+
+                            <span>Youtube</span>
+
+                        </a>
+
                     </div>
 
                 </div>
