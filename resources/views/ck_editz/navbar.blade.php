@@ -31,7 +31,7 @@
 
                 <p class="text-[10px] tracking-[0.2em]
                           text-ck-purple font-semibold uppercase mt-1">
-                    Digital Solutions
+                    Digital Consultant
                 </p>
 
             </div>
