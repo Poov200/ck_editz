@@ -506,7 +506,7 @@
                 <div class="bg-ck-bg p-10 rounded-3xl relative border border-purple-100 shadow-sm" data-aos="fade-up" data-aos-delay="@{{ $index * 150 }}" ng-repeat="t in testimonials">
                     <i class="fas fa-quote-left text-5xl text-purple-200 absolute top-6 right-6"></i>
                     <div class="flex items-center mb-6 relative z-10">
-                        <img ng-src="@{{t.image}}" alt="Client" class="w-16 h-16 rounded-full object-cover mr-4 border-4 border-white shadow-md">
+                        
                         <div>
                             <h4 class="font-display font-bold text-lg text-ck-dark">@{{t.name}}</h4>
                             <p class="text-sm text-ck-dark/50 font-medium">@{{t.role}}</p>
@@ -908,7 +908,7 @@
     {
         title: 'GEM Registration',
         headline: 'Take Your Business to the Government Marketplace.',
-        icon: 'fas fa-file-signature',
+        icon: "{{ asset('img/icons/register.png') }}",
 
         shortDescription: 'Get hassle-free assistance with GEM registration and prepare your business for government procurement opportunities...',
 
@@ -916,6 +916,18 @@
 
         colorClass: 'text-ck-cyan bg-cyan-50',
         url: "{{ route('gem') }}"
+    },
+    {
+    title: 'YouTube Management',
+    headline: 'Grow Your Brand with Powerful YouTube Management.',
+    icon: "{{ asset('img/icons/youtube.png') }}",
+
+    shortDescription: 'Get professional YouTube management to grow your channel, improve engagement, and build a stronger online presence...',
+
+    description: 'Get professional YouTube management services to keep your channel active, engaging, and optimized. From content planning and video optimization to thumbnails, titles, descriptions, and audience growth, we help your brand build a stronger presence on YouTube.',
+
+    colorClass: 'text-red-600 bg-red-50',
+    url: ""
     }
 
 ];
@@ -929,11 +941,27 @@
                 { title: 'Product Launch', category: 'Web & Landing', image: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2072&auto=format&fit=crop' }
             ];
 
-            $scope.testimonials = [
-                { name: 'Sarah Johnson', role: 'CEO, Bella Foods', image: 'https://randomuser.me/api/portraits/women/44.jpg', message: 'CK Editz transformed our online presence. Our online orders doubled within a month of running their Meta Ads!' },
-                { name: 'Michael Chen', role: 'Founder, TechNova', image: 'https://randomuser.me/api/portraits/men/32.jpg', message: 'Professional, responsive, and results-driven. They designed our landing page and brought us high-quality B2B leads.' },
-                { name: 'Emily Davis', role: 'Marketing Head, FitZone', image: 'https://randomuser.me/api/portraits/women/68.jpg', message: 'The social media handling and video editing is top-notch. Our engagement is up 300% and the reels look amazing!' }
-            ];
+           $scope.testimonials = [
+    {
+        name: 'Arun Kumar',
+        role: 'Business Owner, Chennai',
+        initial: 'A',
+        message: 'CK Editz helped us improve our online presence with a professional website and digital marketing. We started getting more enquiries from customers.'
+    },
+    {
+        name: 'Priya Devi',
+        role: 'Founder, Homemade Foods',
+        initial: 'P',
+        message: 'The team at CK Editz understood our business needs very well. Their social media designs and marketing support helped us reach more customers.'
+    },
+    {
+        name: 'Suresh Raj',
+        role: 'Founder',
+        initial: 'S',
+        message: 'We are very happy with the website and promotional content created by CK Editz. Their designs look professional and have helped our business get more attention online.'
+    },
+   
+];
 
             $scope.faqs = [
                 { question: 'Do you provide complete website solutions?', answer: 'Yes! We handle everything from start to finish. This includes domain registration, web hosting, website/landing page design, and ongoing maintenance.', open: true },
