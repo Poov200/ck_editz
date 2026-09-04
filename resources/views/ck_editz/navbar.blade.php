@@ -31,7 +31,7 @@
                     CK Editz
                 </h1>
 
-                <p class="text-[12px] tracking-[0.2em]
+                <p class="text-[10px] tracking-[0.2em]
                           text-ck-purple font-semibold uppercase mt-1">
                     Digital Consultant
                 </p>
