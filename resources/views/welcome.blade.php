@@ -472,7 +472,7 @@
                     </div>
                 </div>
                 <div class="flex items-center gap-4 bg-white/5 backdrop-blur-sm border border-white/10 px-6 py-4 rounded-2xl min-w-[250px]">
-                    <img src="{{ asset('img/clients-logo/green-logo.png') }}" alt="ShopEasy Logo" class="w-14 h-14 object-contain bg-white p-2 rounded-xl shadow-md">
+                    <img src="{{ asset('img/clients-logo/green.png') }}" alt="ShopEasy Logo" class="w-14 h-14 object-contain bg-white p-2 rounded-xl shadow-md">
                     <div>
                         <h3 class="text-lg font-display font-bold text-white leading-none">GREEN</h3>
                         <p class="text-xs text-white/40 font-medium uppercase tracking-wider mt-1">INDIA ELEVATOR</p>
@@ -516,7 +516,7 @@
                     </div>
                 </div>
                 <div class="flex items-center gap-4 bg-white/5 backdrop-blur-sm border border-white/10 px-6 py-4 rounded-2xl min-w-[250px]">
-                    <img src="{{ asset('img/clients-logo/green-logo.png') }}" alt="ShopEasy Logo" class="w-14 h-14 object-contain bg-white p-2 rounded-xl shadow-md">
+                    <img src="{{ asset('img/clients-logo/green.png') }}" alt="ShopEasy Logo" class="w-14 h-14 object-contain bg-white p-2 rounded-xl shadow-md">
                     <div>
                         <h3 class="text-lg font-display font-bold text-white leading-none">GREEN</h3>
                         <p class="text-xs text-white/40 font-medium uppercase tracking-wider mt-1">INDIA ELEVATOR</p>
