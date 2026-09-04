@@ -16,20 +16,22 @@
         <a href="{{ url('/') }}#home"
            class="flex items-center gap-3 group">
 
-            <img
-                src="{{ asset('img/logo.png') }}"
-                alt="CK Editz Logo"
-                class="w-12 h-12 rounded-full object-cover shadow-black
-                       group-hover:rotate-12 transition duration-300">
+            <div class="w-16 h-16 rounded-full bg-black flex items-center justify-center 
+            group-hover:rotate-12 transition duration-300">
+    <img 
+        src="{{ asset('img/logo.png') }}" 
+        alt="CK Editz Logo" 
+        class="w-16 h-16 object-contain">
+</div>
 
             <div class="hidden sm:block">
 
-                <h1 class="text-xl font-display font-extrabold
-                           text-ck-dark leading-none">
+                <h1 class="text-3xl font-display font-extrabold
+                           text-ck-gold leading-none">
                     CK Editz
                 </h1>
 
-                <p class="text-[10px] tracking-[0.2em]
+                <p class="text-[12px] tracking-[0.2em]
                           text-ck-purple font-semibold uppercase mt-1">
                     Digital Consultant
                 </p>

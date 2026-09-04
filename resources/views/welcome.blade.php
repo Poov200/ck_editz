@@ -33,7 +33,9 @@
                         'ck-purple': '#8B5CF6',
                         'ck-pink': '#EC4899',
                         'ck-cyan': '#06B6D4',
-                        'ck-dark': '#090014',
+                        'ck-dark': '#121400',
+                        'ck-gold': '#e68e0a',
+                        
                     }
                 }
             }
