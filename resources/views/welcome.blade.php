@@ -221,15 +221,7 @@
     </section>
 
     <!-- Marquee / Trusted By -->
-    <section class="py-8 bg-ck-dark overflow-hidden">
-        <div class="flex w-max animate-marquee">
-            <div class="flex items-center space-x-16 px-8 text-white/40 text-2xl font-display font-bold uppercase tracking-wider" ng-repeat="x in [1,2]">
-                <span ng-repeat="client in clients" class="hover:text-white transition flex items-center gap-3 cursor-default">
-                    <i class="fas @{{client.icon}} text-ck-pink"></i> @{{client.name}}
-                </span>
-            </div>
-        </div>
-    </section>
+
 
     <!-- About Us -->
     <section id="about" class="py-32 relative">
@@ -427,67 +419,127 @@
 
 
     <!-- Portfolio / Work -->
- <section id="portfolio" class="py-32 bg-ck-bg relative overflow-hidden">
-    <div class="container mx-auto px-6">
-        <div class="text-center mb-20" data-aos="fade-up">
-            <span class="text-ck-purple font-bold uppercase tracking-[0.3em] text-xl">Portfolio</span>
-            <h2 class="text-3xl md:text-3xl font-display mt-4 text-ck-dark font-extrabold">Our Recent <span class="animated-text">Successes</span></h2>
-            <p class="text-gray-500 mt-4 max-w-2xl mx-auto">Driving Real Results through Optimized Google My Business profiles, Engaging Social Media Pages, High-Converting Meta Ads, and Stunning Websites.</p>
-        </div>
+<!-- Client Logo Marquee Section -->
+<section id="portfolio" class="py-24 bg-ck-dark relative overflow-hidden">
+    <div class="absolute top-0 left-1/2 w-96 h-96 bg-ck-purple blob filter blur-[150px] opacity-20"></div>
+    
+    <!-- Section Header -->
+    <div class="container mx-auto px-6 text-center mb-12 relative z-10" data-aos="fade-up">
+        <span class="text-ck-pink font-bold uppercase tracking-[0.3em] text-xs">Our Clients</span>
+        <h2 class="text-3xl md:text-4xl font-display mt-4 text-white font-extrabold">Brands That <span class="animated-text">Trust Us</span></h2>
+    </div>
 
-        <!-- Bento Grid Layout -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-[300px]">
+    <!-- Marquee Wrapper -->
+    <div class="relative z-10 flex overflow-hidden">
+        <!-- We duplicate the track to create an infinite loop -->
+        <div class="flex animate-marquee w-max">
             
-            <!-- 1. Google My Business (Large Feature) -->
-            <div class="relative group overflow-hidden rounded-3xl cursor-pointer shadow-lg md:col-span-2 lg:col-span-2 lg:row-span-2" data-aos="zoom-in-up">
-                <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=1200&q=80" alt="GMB Optimization" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                <div class="absolute inset-0 bg-gradient-to-t from-ck-dark/95 via-ck-dark/40 to-transparent flex flex-col justify-end p-8">
-                    <div class="flex gap-2 mb-3">
-                        <span class="text-white text-xs uppercase font-bold tracking-widest bg-blue-500 w-max px-3 py-1 rounded-full shadow-lg">Google My Business</span>
-                        <span class="text-ck-dark text-xs uppercase font-bold tracking-widest bg-yellow-400 w-max px-3 py-1 rounded-full shadow-lg flex items-center gap-1">⭐ 4.9 Rating</span>
+            <!-- Track 1 -->
+            <div class="flex items-center gap-8 pr-8">
+                <!-- Client 1 -->
+                <div class="flex items-center gap-4 bg-white/5 backdrop-blur-sm border border-white/10 px-6 py-4 rounded-2xl min-w-[250px]">
+                    <!-- Replace icon below with <img src="logo.png" class="h-12 w-12 object-contain"> if you have an image -->
+                    <div class="w-12 h-12 rounded-xl flex items-center justify-center text-2xl text-ck-pink bg-ck-pink/10 border border-ck-pink/20">
+                        <i class="fas fa-microchip"></i>
                     </div>
-                    <h3 class="text-3xl md:text-4xl font-display font-bold text-white">Local SEO & GMB Optimization</h3>
-                    <p class="text-gray-300 mt-2 max-w-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 max-h-0 group-hover:max-h-20 overflow-hidden">Increased local search visibility and foot traffic by 140% for our clients through fully optimized Google My Business profiles and review generation strategies.</p>
-                </div>
-            </div>
-
-            <!-- 2. Facebook Pages -->
-            <div class="relative group overflow-hidden rounded-3xl cursor-pointer shadow-lg" data-aos="zoom-in-up" data-aos-delay="100">
-                <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=600&q=80" alt="Facebook Page Management" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                <div class="absolute inset-0 bg-gradient-to-t from-ck-dark/95 via-ck-dark/40 to-transparent flex flex-col justify-end p-6">
-                    <span class="text-white text-xs uppercase font-bold tracking-widest mb-2 bg-blue-600 w-max px-3 py-1 rounded-full shadow-lg">Facebook Pages</span>
-                    <h3 class="text-2xl font-display font-bold text-white">Social Community Management</h3>
-                </div>
-            </div>
-
-            <!-- 3. Meta Ads -->
-            <div class="relative group overflow-hidden rounded-3xl cursor-pointer shadow-lg" data-aos="zoom-in-up" data-aos-delay="200">
-                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80" alt="Meta Ads Campaign" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                <div class="absolute inset-0 bg-gradient-to-t from-ck-dark/95 via-ck-dark/40 to-transparent flex flex-col justify-end p-6">
-                    <div class="flex gap-2 mb-2">
-                        <span class="text-white text-xs uppercase font-bold tracking-widest bg-gradient-to-r from-ck-purple to-ck-pink w-max px-3 py-1 rounded-full shadow-lg">Meta Ads</span>
+                    <div>
+                        <h3 class="text-lg font-display font-bold text-white leading-none">TechNova</h3>
+                        <p class="text-xs text-white/40 font-medium uppercase tracking-wider mt-1">Technology</p>
                     </div>
-                    <h3 class="text-2xl font-display font-bold text-white">High-ROAS Ad Campaigns</h3>
-                    <span class="text-green-400 font-bold text-sm mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">Avg 4.2x Return on Ad Spend</span>
+                </div>
+                <!-- Client 2 -->
+                <div class="flex items-center gap-4 bg-white/5 backdrop-blur-sm border border-white/10 px-6 py-4 rounded-2xl min-w-[250px]">
+                    <div class="w-12 h-12 rounded-xl flex items-center justify-center text-2xl text-ck-cyan bg-ck-cyan/10 border border-ck-cyan/20">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-display font-bold text-white leading-none">Bella Foods</h3>
+                        <p class="text-xs text-white/40 font-medium uppercase tracking-wider mt-1">Food & Bev</p>
+                    </div>
+                </div>
+                <!-- Client 3 -->
+                <div class="flex items-center gap-4 bg-white/5 backdrop-blur-sm border border-white/10 px-6 py-4 rounded-2xl min-w-[250px]">
+                    <div class="w-12 h-12 rounded-xl flex items-center justify-center text-2xl text-ck-purple bg-ck-purple/10 border border-ck-purple/20">
+                        <i class="fas fa-dumbbell"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-display font-bold text-white leading-none">FitZone</h3>
+                        <p class="text-xs text-white/40 font-medium uppercase tracking-wider mt-1">Health & Fitness</p>
+                    </div>
+                </div>
+                <!-- Client 4 -->
+                <div class="flex items-center gap-4 bg-white/5 backdrop-blur-sm border border-white/10 px-6 py-4 rounded-2xl min-w-[250px]">
+                    <div class="w-12 h-12 rounded-xl flex items-center justify-center text-2xl text-ck-pink bg-ck-pink/10 border border-ck-pink/20">
+                        <i class="fas fa-shopping-bag"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-display font-bold text-white leading-none">ShopEasy</h3>
+                        <p class="text-xs text-white/40 font-medium uppercase tracking-wider mt-1">E-Commerce</p>
+                    </div>
+                </div>
+                <!-- Client 5 -->
+                <div class="flex items-center gap-4 bg-white/5 backdrop-blur-sm border border-white/10 px-6 py-4 rounded-2xl min-w-[250px]">
+                    <div class="w-12 h-12 rounded-xl flex items-center justify-center text-2xl text-ck-cyan bg-ck-cyan/10 border border-ck-cyan/20">
+                        <i class="fas fa-plane"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-display font-bold text-white leading-none">GlobalEx</h3>
+                        <p class="text-xs text-white/40 font-medium uppercase tracking-wider mt-1">Travel & Logistics</p>
+                    </div>
                 </div>
             </div>
 
-            <!-- 4. Landing Page (Wide) -->
-            <div class="relative group overflow-hidden rounded-3xl cursor-pointer shadow-lg md:col-span-2" data-aos="zoom-in-up" data-aos-delay="300">
-                <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=1200&q=80" alt="Landing Page Design" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                <div class="absolute inset-0 bg-gradient-to-t from-ck-dark/95 via-ck-dark/40 to-transparent flex flex-col justify-end p-8">
-                    <span class="text-white text-xs uppercase font-bold tracking-widest mb-2 bg-gradient-to-r from-ck-purple to-ck-pink w-max px-3 py-1 rounded-full shadow-lg">Landing Pages</span>
-                    <h3 class="text-3xl font-display font-bold text-white">High-Converting Landing Pages</h3>
-                    <p class="text-gray-300 mt-2 max-w-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">Custom built landing pages designed specifically to turn traffic into leads and sales.</p>
+            <!-- Track 2 (Exact Duplicate for seamless looping) -->
+            <div class="flex items-center gap-8 pr-8">
+                <!-- Client 1 (Duplicate) -->
+                <div class="flex items-center gap-4 bg-white/5 backdrop-blur-sm border border-white/10 px-6 py-4 rounded-2xl min-w-[250px]">
+                    <div class="w-12 h-12 rounded-xl flex items-center justify-center text-2xl text-ck-pink bg-ck-pink/10 border border-ck-pink/20">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-display font-bold text-white leading-none">TechNova</h3>
+                        <p class="text-xs text-white/40 font-medium uppercase tracking-wider mt-1">Technology</p>
+                    </div>
                 </div>
-            </div>
-
-            <!-- 5. Website Design -->
-            <div class="relative group overflow-hidden rounded-3xl cursor-pointer shadow-lg" data-aos="zoom-in-up" data-aos-delay="400">
-                <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&w=600&q=80" alt="Website Development" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                <div class="absolute inset-0 bg-gradient-to-t from-ck-dark/95 via-ck-dark/40 to-transparent flex flex-col justify-end p-6">
-                    <span class="text-white text-xs uppercase font-bold tracking-widest mb-2 bg-gray-800 w-max px-3 py-1 rounded-full shadow-lg">Websites</span>
-                    <h3 class="text-2xl font-display font-bold text-white">Full Website Development</h3>
+                <!-- Client 2 (Duplicate) -->
+                <div class="flex items-center gap-4 bg-white/5 backdrop-blur-sm border border-white/10 px-6 py-4 rounded-2xl min-w-[250px]">
+                    <div class="w-12 h-12 rounded-xl flex items-center justify-center text-2xl text-ck-cyan bg-ck-cyan/10 border border-ck-cyan/20">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-display font-bold text-white leading-none">Bella Foods</h3>
+                        <p class="text-xs text-white/40 font-medium uppercase tracking-wider mt-1">Food & Bev</p>
+                    </div>
+                </div>
+                <!-- Client 3 (Duplicate) -->
+                <div class="flex items-center gap-4 bg-white/5 backdrop-blur-sm border border-white/10 px-6 py-4 rounded-2xl min-w-[250px]">
+                    <div class="w-12 h-12 rounded-xl flex items-center justify-center text-2xl text-ck-purple bg-ck-purple/10 border border-ck-purple/20">
+                        <i class="fas fa-dumbbell"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-display font-bold text-white leading-none">FitZone</h3>
+                        <p class="text-xs text-white/40 font-medium uppercase tracking-wider mt-1">Health & Fitness</p>
+                    </div>
+                </div>
+                <!-- Client 4 (Duplicate) -->
+                <div class="flex items-center gap-4 bg-white/5 backdrop-blur-sm border border-white/10 px-6 py-4 rounded-2xl min-w-[250px]">
+                    <div class="w-12 h-12 rounded-xl flex items-center justify-center text-2xl text-ck-pink bg-ck-pink/10 border border-ck-pink/20">
+                        <i class="fas fa-shopping-bag"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-display font-bold text-white leading-none">ShopEasy</h3>
+                        <p class="text-xs text-white/40 font-medium uppercase tracking-wider mt-1">E-Commerce</p>
+                    </div>
+                </div>
+                <!-- Client 5 (Duplicate) -->
+                <div class="flex items-center gap-4 bg-white/5 backdrop-blur-sm border border-white/10 px-6 py-4 rounded-2xl min-w-[250px]">
+                    <div class="w-12 h-12 rounded-xl flex items-center justify-center text-2xl text-ck-cyan bg-ck-cyan/10 border border-ck-cyan/20">
+                        <i class="fas fa-plane"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-display font-bold text-white leading-none">GlobalEx</h3>
+                        <p class="text-xs text-white/40 font-medium uppercase tracking-wider mt-1">Travel & Logistics</p>
+                    </div>
                 </div>
             </div>
 
