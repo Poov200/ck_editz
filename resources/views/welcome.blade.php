@@ -440,109 +440,91 @@
             <div class="flex items-center gap-8 pr-8">
                 <!-- Client 1 -->
                 <div class="flex items-center gap-4 bg-white/5 backdrop-blur-sm border border-white/10 px-6 py-4 rounded-2xl min-w-[250px]">
-                    <!-- Replace icon below with <img src="logo.png" class="h-12 w-12 object-contain"> if you have an image -->
-                    <div class="w-12 h-12 rounded-xl flex items-center justify-center text-2xl text-ck-pink bg-ck-pink/10 border border-ck-pink/20">
-                        <i class="fas fa-microchip"></i>
-                    </div>
+                    <!-- Replace 'technova.png' with your actual image path -->
+                    <img src="{{ asset('img/clients-logo/refflow-logo.png') }}" alt="TechNova Logo" class="w-14 h-14 object-contain bg-white p-2 rounded-xl shadow-md">
                     <div>
-                        <h3 class="text-lg font-display font-bold text-white leading-none">TechNova</h3>
-                        <p class="text-xs text-white/40 font-medium uppercase tracking-wider mt-1">Technology</p>
+                        <h3 class="text-lg font-display font-bold text-white leading-none">REFFLOW</h3>
+                        <p class="text-xs text-white/40 font-medium uppercase tracking-wider mt-1">AC</p>
                     </div>
                 </div>
                 <!-- Client 2 -->
                 <div class="flex items-center gap-4 bg-white/5 backdrop-blur-sm border border-white/10 px-6 py-4 rounded-2xl min-w-[250px]">
-                    <div class="w-12 h-12 rounded-xl flex items-center justify-center text-2xl text-ck-cyan bg-ck-cyan/10 border border-ck-cyan/20">
-                        <i class="fas fa-utensils"></i>
-                    </div>
+                    <img src="{{ asset('img/clients-logo/sg.png') }}" alt="Bella Foods Logo" class="w-14 h-14 object-contain bg-white p-2 rounded-xl shadow-md">
                     <div>
-                        <h3 class="text-lg font-display font-bold text-white leading-none">Bella Foods</h3>
-                        <p class="text-xs text-white/40 font-medium uppercase tracking-wider mt-1">Food & Bev</p>
+                        <h3 class="text-lg font-display font-bold text-white leading-none">SG ENVIRO SYSTEMS</h3>
+                        <p class="text-xs text-white/40 font-medium uppercase tracking-wider mt-1">Water</p>
                     </div>
                 </div>
                 <!-- Client 3 -->
                 <div class="flex items-center gap-4 bg-white/5 backdrop-blur-sm border border-white/10 px-6 py-4 rounded-2xl min-w-[250px]">
-                    <div class="w-12 h-12 rounded-xl flex items-center justify-center text-2xl text-ck-purple bg-ck-purple/10 border border-ck-purple/20">
-                        <i class="fas fa-dumbbell"></i>
-                    </div>
+                    <img src="{{ asset('img/clients-logo/ucs-logo.png') }}" alt="FitZone Logo" class="w-14 h-14 object-contain bg-white p-2 rounded-xl shadow-md">
                     <div>
-                        <h3 class="text-lg font-display font-bold text-white leading-none">FitZone</h3>
-                        <p class="text-xs text-white/40 font-medium uppercase tracking-wider mt-1">Health & Fitness</p>
+                        <h3 class="text-lg font-display font-bold text-white leading-none">UCS</h3>
+                        <p class="text-xs text-white/40 font-medium uppercase tracking-wider mt-1">Construction Solutions</p>
                     </div>
                 </div>
                 <!-- Client 4 -->
                 <div class="flex items-center gap-4 bg-white/5 backdrop-blur-sm border border-white/10 px-6 py-4 rounded-2xl min-w-[250px]">
-                    <div class="w-12 h-12 rounded-xl flex items-center justify-center text-2xl text-ck-pink bg-ck-pink/10 border border-ck-pink/20">
-                        <i class="fas fa-shopping-bag"></i>
-                    </div>
+                    <img src="{{ asset('img/clients-logo/cni.jpeg') }}" alt="ShopEasy Logo" class="w-14 h-14 object-contain bg-white p-2 rounded-xl shadow-md">
                     <div>
-                        <h3 class="text-lg font-display font-bold text-white leading-none">ShopEasy</h3>
-                        <p class="text-xs text-white/40 font-medium uppercase tracking-wider mt-1">E-Commerce</p>
+                        <h3 class="text-lg font-display font-bold text-white leading-none">CNI</h3>
+                        <p class="text-xs text-white/40 font-medium uppercase tracking-wider mt-1">Construction Network</p>
                     </div>
                 </div>
-                <!-- Client 5 -->
                 <div class="flex items-center gap-4 bg-white/5 backdrop-blur-sm border border-white/10 px-6 py-4 rounded-2xl min-w-[250px]">
-                    <div class="w-12 h-12 rounded-xl flex items-center justify-center text-2xl text-ck-cyan bg-ck-cyan/10 border border-ck-cyan/20">
-                        <i class="fas fa-plane"></i>
-                    </div>
+                    <img src="{{ asset('img/clients-logo/green-logo.png') }}" alt="ShopEasy Logo" class="w-14 h-14 object-contain bg-white p-2 rounded-xl shadow-md">
                     <div>
-                        <h3 class="text-lg font-display font-bold text-white leading-none">GlobalEx</h3>
-                        <p class="text-xs text-white/40 font-medium uppercase tracking-wider mt-1">Travel & Logistics</p>
+                        <h3 class="text-lg font-display font-bold text-white leading-none">GREEN</h3>
+                        <p class="text-xs text-white/40 font-medium uppercase tracking-wider mt-1">INDIA ELEVATOR</p>
                     </div>
                 </div>
+                
             </div>
 
             <!-- Track 2 (Exact Duplicate for seamless looping) -->
             <div class="flex items-center gap-8 pr-8">
                 <!-- Client 1 (Duplicate) -->
                 <div class="flex items-center gap-4 bg-white/5 backdrop-blur-sm border border-white/10 px-6 py-4 rounded-2xl min-w-[250px]">
-                    <div class="w-12 h-12 rounded-xl flex items-center justify-center text-2xl text-ck-pink bg-ck-pink/10 border border-ck-pink/20">
-                        <i class="fas fa-microchip"></i>
-                    </div>
+                    <img src="{{ asset('img/clients-logo/refflow-logo.png') }}" alt="TechNova Logo" class="w-14 h-14 object-contain bg-white p-2 rounded-xl shadow-md">
                     <div>
-                        <h3 class="text-lg font-display font-bold text-white leading-none">TechNova</h3>
-                        <p class="text-xs text-white/40 font-medium uppercase tracking-wider mt-1">Technology</p>
+                        <h3 class="text-lg font-display font-bold text-white leading-none">REFFLOW</h3>
+                        <p class="text-xs text-white/40 font-medium uppercase tracking-wider mt-1">AC</p>
                     </div>
                 </div>
                 <!-- Client 2 (Duplicate) -->
                 <div class="flex items-center gap-4 bg-white/5 backdrop-blur-sm border border-white/10 px-6 py-4 rounded-2xl min-w-[250px]">
-                    <div class="w-12 h-12 rounded-xl flex items-center justify-center text-2xl text-ck-cyan bg-ck-cyan/10 border border-ck-cyan/20">
-                        <i class="fas fa-utensils"></i>
-                    </div>
+                    <img src="{{ asset('img/clients-logo/sg.png') }}" alt="Bella Foods Logo" class="w-14 h-14 object-contain bg-white p-2 rounded-xl shadow-md">
                     <div>
-                        <h3 class="text-lg font-display font-bold text-white leading-none">Bella Foods</h3>
-                        <p class="text-xs text-white/40 font-medium uppercase tracking-wider mt-1">Food & Bev</p>
+                        <h3 class="text-lg font-display font-bold text-white leading-none">SG ENVIRO SYSTEMS</h3>
+                        <p class="text-xs text-white/40 font-medium uppercase tracking-wider mt-1">Water</p>
                     </div>
                 </div>
                 <!-- Client 3 (Duplicate) -->
                 <div class="flex items-center gap-4 bg-white/5 backdrop-blur-sm border border-white/10 px-6 py-4 rounded-2xl min-w-[250px]">
-                    <div class="w-12 h-12 rounded-xl flex items-center justify-center text-2xl text-ck-purple bg-ck-purple/10 border border-ck-purple/20">
-                        <i class="fas fa-dumbbell"></i>
-                    </div>
+                    <img src="{{ asset('img/clients-logo/ucs-logo.png') }}" alt="FitZone Logo" class="w-14 h-14 object-contain bg-white p-2 rounded-xl shadow-md">
                     <div>
-                        <h3 class="text-lg font-display font-bold text-white leading-none">FitZone</h3>
-                        <p class="text-xs text-white/40 font-medium uppercase tracking-wider mt-1">Health & Fitness</p>
+                        <h3 class="text-lg font-display font-bold text-white leading-none">UCS</h3>
+                        <p class="text-xs text-white/40 font-medium uppercase tracking-wider mt-1">Construction Solutions</p>
                     </div>
                 </div>
                 <!-- Client 4 (Duplicate) -->
                 <div class="flex items-center gap-4 bg-white/5 backdrop-blur-sm border border-white/10 px-6 py-4 rounded-2xl min-w-[250px]">
-                    <div class="w-12 h-12 rounded-xl flex items-center justify-center text-2xl text-ck-pink bg-ck-pink/10 border border-ck-pink/20">
-                        <i class="fas fa-shopping-bag"></i>
-                    </div>
+                    <img src="{{ asset('img/clients-logo/cni.jpeg') }}" alt="ShopEasy Logo" class="w-14 h-14 object-contain bg-white p-2 rounded-xl shadow-md">
                     <div>
-                        <h3 class="text-lg font-display font-bold text-white leading-none">ShopEasy</h3>
-                        <p class="text-xs text-white/40 font-medium uppercase tracking-wider mt-1">E-Commerce</p>
+                        <h3 class="text-lg font-display font-bold text-white leading-none">CNI</h3>
+                        <p class="text-xs text-white/40 font-medium uppercase tracking-wider mt-1">Construction Network</p>
                     </div>
                 </div>
-                <!-- Client 5 (Duplicate) -->
                 <div class="flex items-center gap-4 bg-white/5 backdrop-blur-sm border border-white/10 px-6 py-4 rounded-2xl min-w-[250px]">
-                    <div class="w-12 h-12 rounded-xl flex items-center justify-center text-2xl text-ck-cyan bg-ck-cyan/10 border border-ck-cyan/20">
-                        <i class="fas fa-plane"></i>
-                    </div>
+                    <img src="{{ asset('img/clients-logo/green-logo.png') }}" alt="ShopEasy Logo" class="w-14 h-14 object-contain bg-white p-2 rounded-xl shadow-md">
                     <div>
-                        <h3 class="text-lg font-display font-bold text-white leading-none">GlobalEx</h3>
-                        <p class="text-xs text-white/40 font-medium uppercase tracking-wider mt-1">Travel & Logistics</p>
+                        <h3 class="text-lg font-display font-bold text-white leading-none">GREEN</h3>
+                        <p class="text-xs text-white/40 font-medium uppercase tracking-wider mt-1">INDIA ELEVATOR</p>
                     </div>
                 </div>
+
+
+                
             </div>
 
         </div>
