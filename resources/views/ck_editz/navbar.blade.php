@@ -19,7 +19,7 @@
             <img
                 src="{{ asset('img/logo.png') }}"
                 alt="CK Editz Logo"
-                class="w-12 h-12 rounded-full object-cover shadow-lg
+                class="w-12 h-12 rounded-full object-cover shadow-black
                        group-hover:rotate-12 transition duration-300">
 
             <div class="hidden sm:block">
@@ -327,26 +327,9 @@
             </li>
 
 
-            <!-- WORK -->
+           
 
-            <li>
-
-                <a href="{{ url('/') }}#portfolio"
-                   class="hover:text-ck-purple transition
-                          relative group">
-
-                    Work
-
-                    <span
-                        class="absolute -bottom-2 left-0 w-0 h-1
-                               bg-ck-pink rounded-full
-                               group-hover:w-full
-                               transition-all duration-300">
-                    </span>
-
-                </a>
-
-            </li>
+            
 
 
             <!-- CONTACT -->
@@ -497,7 +480,7 @@
 
 
             <a
-                href="{{ route('meta') }}"
+                href="{{ url('/') }}#contact"
                 ng-click="toggleMenu()"
                 class="hover:text-ck-purple transition">
                 Meta Ads
@@ -505,7 +488,7 @@
 
 
             <a
-                href="{{ route('googleads') }}"
+                href="{{ url('/') }}#contact"
                 ng-click="toggleMenu()"
                 class="hover:text-ck-purple transition">
                 Google Ads
@@ -513,7 +496,7 @@
 
 
             <a
-                href="{{ route('gmb') }}"
+                href="{{ url('/') }}#contact"
                 ng-click="toggleMenu()"
                 class="hover:text-ck-purple transition">
                 Google My Business
@@ -521,7 +504,7 @@
 
 
             <a
-                href="{{ route('socialmediahandling') }}"
+                href="{{ url('/') }}#contact"
                 ng-click="toggleMenu()"
                 class="hover:text-ck-purple transition">
                 Social Media Handling
@@ -529,7 +512,7 @@
 
 
             <a
-                href="{{ route('videoediting') }}"
+                href="{{ url('/') }}#contact"
                 ng-click="toggleMenu()"
                 class="hover:text-ck-purple transition">
                 Video Editing
@@ -537,7 +520,7 @@
 
 
             <a
-                href="{{ route('posterdesign') }}"
+                href="{{ url('/') }}#contact"
                 ng-click="toggleMenu()"
                 class="hover:text-ck-purple transition">
                 Poster Design
@@ -545,7 +528,7 @@
 
 
             <a
-                href="{{ route('websitedesign') }}"
+                href="{{ url('/') }}#contact"
                 ng-click="toggleMenu()"
                 class="hover:text-ck-purple transition">
                 Website Design
@@ -553,7 +536,7 @@
 
 
             <a
-                href="{{ route('landingpage') }}"
+                href="{{ url('/') }}#contact"
                 ng-click="toggleMenu()"
                 class="hover:text-ck-purple transition">
                 Landing Page
@@ -561,7 +544,7 @@
 
 
             <a
-                href="{{ route('domainregistration') }}"
+                href="{{ url('/') }}#contact"
                 ng-click="toggleMenu()"
                 class="hover:text-ck-purple transition">
                 Domain Registration
@@ -569,7 +552,7 @@
 
 
             <a
-                href="{{ route('hostingsupport') }}"
+                href="{{ url('/') }}#contact"
                 ng-click="toggleMenu()"
                 class="hover:text-ck-purple transition">
                 Hosting Support
@@ -577,7 +560,7 @@
 
 
             <a
-                href="{{ route('gem') }}"
+                href="{{ url('/') }}#contact"
                 ng-click="toggleMenu()"
                 class="hover:text-ck-purple transition">
                 GEM
@@ -590,14 +573,7 @@
 
     <!-- WORK -->
 
-    <a
-        href="{{ url('/') }}#portfolio"
-        ng-click="toggleMenu()"
-        class="hover:text-ck-purple transition">
-
-        Work
-
-    </a>
+   
 
 
     <!-- CONTACT -->
